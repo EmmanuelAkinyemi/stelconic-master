@@ -15,3 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PropertyController::class, 'index'])->name('index');
+
+Route::view('/property', 'property');
+Route::view('/blog', 'blog');
+Route::view('/contact', 'contact');
+Route::view('/signin', 'signin');
+

@@ -8,7 +8,7 @@
             <div class="outer-box">
                 <div class="main-box">
                     <div class="logo-box">
-                        <figure class="logo"><a href="index.html"><img src="{{ asset('web/images/logo-light.png') }}"
+                        <figure class="logo"><a href="/"><img src="{{ asset('web/images/logo-light.png') }}"
                                     alt=""></a></figure>
                     </div>
                     <div class="menu-area clearfix">
@@ -21,24 +21,21 @@
                         <nav class="main-menu navbar-expand-md navbar-light">
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li class="current"><a href="index.html"><span>Home</span></a>
+                                    <li class="current"><a href="/"><span>Home</span></a>
                                     </li>
 
-                                    <li class=""><a href="property.html"><span>Property</span></a>
+                                    <li class=""><a href="property"><span>Property</span></a>
                                     </li>
-                                    <li class=""><a href="blog.html"><span>Blog</span></a>
+                                    <li class=""><a href="blog"><span>Blog</span></a>
                                     </li>
-                                    <li><a href="contact.html"><span>Contact</span></a></li>
+                                    <li><a href="contact"><span>Contact</span></a></li>
                                 </ul>
                             </div>
                         </nav>
                     </div>
                     <div class="menu-right-content clearfix">
                         <div class="sign-box">
-                            <a href="signin.html"><i class="fas fa-user"></i>Sign In</a>
-                        </div>
-                        <div class="btn-box">
-                            <a href="index.html" class="theme-btn btn-one"><span>+</span>Add Listing</a>
+                            <a href="signin"><i class="fas fa-user"></i>Sign In</a>
                         </div>
                     </div>
                 </div>
