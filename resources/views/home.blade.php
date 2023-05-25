@@ -1,6 +1,71 @@
 @extends('component.layout')
 
 @section('content')
+    <!-- main header -->
+    <header class="main-header header-style-two">
+        <!-- header-lower -->
+        <div class="header-lower">
+            <div class="outer-box">
+                <div class="main-box">
+                    <div class="logo-box">
+                        <figure class="logo"><a href="index.html"><img src="{{ asset('web/images/logo-light.png') }}"
+                                    alt=""></a></figure>
+                    </div>
+                    <div class="menu-area clearfix">
+                        <!--Mobile Navigation Toggler-->
+                        <div class="mobile-nav-toggler">
+                            <i class="icon-bar"></i>
+                            <i class="icon-bar"></i>
+                            <i class="icon-bar"></i>
+                        </div>
+                        <nav class="main-menu navbar-expand-md navbar-light">
+                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li class="current"><a href="index.html"><span>Home</span></a>
+                                    </li>
+
+                                    <li class=""><a href="property.html"><span>Property</span></a>
+                                    </li>
+                                    <li class=""><a href="blog.html"><span>Blog</span></a>
+                                    </li>
+                                    <li><a href="contact.html"><span>Contact</span></a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="menu-right-content clearfix">
+                        <div class="sign-box">
+                            <a href="signin.html"><i class="fas fa-user"></i>Sign In</a>
+                        </div>
+                        <div class="btn-box">
+                            <a href="index.html" class="theme-btn btn-one"><span>+</span>Add Listing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--sticky Header-->
+        <div class="sticky-header">
+            <div class="outer-box">
+                <div class="main-box">
+                    <div class="logo-box">
+                        <figure class="logo"><a href="index.html"><img src="{{ asset('web/images/logo.png') }}"
+                                    alt=""></a></figure>
+                    </div>
+                    <div class="menu-area clearfix">
+                        <nav class="main-menu clearfix">
+                            <!--Keep This Empty / Menu will come through Javascript-->
+                        </nav>
+                    </div>
+                    <div class="btn-box">
+                        <a href="index.html" class="theme-btn btn-one"><span>+</span>Add Listing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main-header end -->
     <!-- banner-style-two -->
     <section class="banner-style-two centred">
         <div class="banner-carousel owl-theme owl-carousel owl-nav-none">
@@ -207,8 +272,8 @@
                         <div class="lower-content">
                             <div class="author-info clearfix">
                                 <div class="author pull-left">
-                                    <figure class="author-thumb"><img src="{{ asset('web/images/feature/author-3.jpg') }}"
-                                            alt="">
+                                    <figure class="author-thumb"><img
+                                            src="{{ asset('web/images/feature/author-3.jpg') }}" alt="">
                                     </figure>
                                     <h6>Keira Mel</h6>
                                 </div>
@@ -733,7 +798,8 @@
             <div class="sec-title centred">
                 <h5>News & Article</h5>
                 <h2>Stay Update With Stelconic</h2>
-                <p>Stay upclose by reading through our blogs and articles to get help yourself get more clues on your <br>preferences, also if you'll have anything to contribute or share</p>
+                <p>Stay upclose by reading through our blogs and articles to get help yourself get more clues on your
+                    <br>preferences, also if you'll have anything to contribute or share</p>
             </div>
             <div class="row clearfix">
                 <div class="col-lg-4 col-md-6 col-sm-12 news-block">

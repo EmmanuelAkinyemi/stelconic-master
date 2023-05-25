@@ -81,71 +81,7 @@
         </div>
         <!-- preloader end -->
 
-        <!-- main header -->
-        <header class="main-header header-style-two">
-            <!-- header-lower -->
-            <div class="header-lower">
-                <div class="outer-box">
-                    <div class="main-box">
-                        <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img
-                                        src="{{ asset('web/images/logo-light.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="menu-area clearfix">
-                            <!--Mobile Navigation Toggler-->
-                            <div class="mobile-nav-toggler">
-                                <i class="icon-bar"></i>
-                                <i class="icon-bar"></i>
-                                <i class="icon-bar"></i>
-                            </div>
-                            <nav class="main-menu navbar-expand-md navbar-light">
-                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                    <ul class="navigation clearfix">
-                                        <li class="current"><a href="index.html"><span>Home</span></a>
-                                        </li>
-
-                                        <li class=""><a href="property.html"><span>Property</span></a>
-                                        </li>
-                                        <li class=""><a href="blog.html"><span>Blog</span></a>
-                                        </li>
-                                        <li><a href="contact.html"><span>Contact</span></a></li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                        <div class="menu-right-content clearfix">
-                            <div class="sign-box">
-                                <a href="signin.html"><i class="fas fa-user"></i>Sign In</a>
-                            </div>
-                            <div class="btn-box">
-                                <a href="index.html" class="theme-btn btn-one"><span>+</span>Add Listing</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--sticky Header-->
-            <div class="sticky-header">
-                <div class="outer-box">
-                    <div class="main-box">
-                        <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img
-                                        src="{{ asset('web/images/logo.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="menu-area clearfix">
-                            <nav class="main-menu clearfix">
-                                <!--Keep This Empty / Menu will come through Javascript-->
-                            </nav>
-                        </div>
-                        <div class="btn-box">
-                            <a href="index.html" class="theme-btn btn-one"><span>+</span>Add Listing</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- main-header end -->
+        
 
         <!-- Mobile Menu  -->
         <div class="mobile-menu">
