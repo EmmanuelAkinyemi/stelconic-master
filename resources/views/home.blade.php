@@ -35,7 +35,7 @@
                     </div>
                     <div class="menu-right-content clearfix">
                         <div class="sign-box">
-                            <a href="signin"><i class="fas fa-user"></i>Sign In</a>
+                            <a href="/signin"><i class="fas fa-user"></i>Sign In</a>
                         </div>
                     </div>
                 </div>

@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', [PropertyController::class, 'index'])->name('index');
+Route::get('/property', [PropertyController::class, 'show']);
 Route::post('/create', [PropertyController::class, 'store'])->name('store');
-Route::get('/create', [PropertyController::class, 'create']);
 // Route::post('/', [PropertyController::class, 'store']);
 
 

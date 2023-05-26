@@ -11,12 +11,11 @@ class PropertyController extends Controller
         $properties = Property::all()->sortByDesc("created_at");
         return view('home', compact('properties'));
     }
-    //get and show single listing
+    //get and show single property
     public function show(Property $property)
     {
-        return view('property', [
-            'property' => $property
-        ]);
+        $properties = Property::all()->sortByDesc("created_at");
+        return view('property', compact('properties'));
     }
 
     public function create()
