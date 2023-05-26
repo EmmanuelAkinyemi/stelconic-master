@@ -81,7 +81,7 @@
         </div>
         <!-- preloader end -->
 
-        
+
 
         <!-- Mobile Menu  -->
         <div class="mobile-menu">
@@ -115,10 +115,9 @@
         </div><!-- End Mobile Menu -->
         {{-- view output --}}
         @yield('content');
-
         <!-- subscribe-section -->
         <section class="subscribe-section bg-color-3">
-            <div class="pattern-layer" style="background-image: url({{ asset('web/images/shape/shape-2.png') }});">
+            <div class="pattern-layer" style="background-image: url({{ asset('web/images/shape/shape-2.png') }});">AAAA
             </div>
             <div class="auto-container">
                 <div class="row clearfix">
