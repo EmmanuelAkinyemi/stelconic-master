@@ -117,7 +117,7 @@
         @yield('content');
         <!-- subscribe-section -->
         <section class="subscribe-section bg-color-3">
-            <div class="pattern-layer" style="background-image: url({{ asset('web/images/shape/shape-2.png') }});">AAAA
+            <div class="pattern-layer" style="background-image: url({{ asset('web/images/shape/shape-2.png') }});">
             </div>
             <div class="auto-container">
                 <div class="row clearfix">

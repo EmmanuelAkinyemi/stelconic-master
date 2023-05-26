@@ -14,9 +14,14 @@ class PropertyController extends Controller
     //get and show single listing
     public function show(Property $property)
     {
-        return view('listings.show', [
+        return view('property', [
             'property' => $property
         ]);
+    }
+
+    public function create()
+    {
+        return view('create');
     }
     public function store(Request $request){
         $property = new Property;

@@ -14,12 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::get('/', [PropertyController::class, 'index'])->name('index');
 Route::post('/create', [PropertyController::class, 'store'])->name('store');
+Route::get('/create', [PropertyController::class, 'create']);
+// Route::post('/', [PropertyController::class, 'store']);
 
-Route::view('/property', 'property');
-Route::view('/blog', 'blog');
-Route::view('/contact', 'contact');
-Route::view('/signin', 'signin');
-Route::view('/create', 'create');
+
+// Route::view('/property', 'property');
+// Route::view('/blog', 'blog');
+// Route::view('/contact', 'contact');
+// Route::view('/signin', 'signin');
+// Route::view('/signup', 'signup');
+// Route::post('/signin', [UserController::class, 'store']);
+// Route::view('/create', 'create');
