@@ -256,7 +256,7 @@
                                         <div class="price-box clearfix">
                                             <div class="price-info pull-left">
                                                 <h6>Start From</h6>
-                                                <h4>{{ $property->price }}</h4>
+                                                <h4>#{{ $property->price }}</h4>
                                             </div>
                                             <div class="author-box pull-right">
                                                 <figure class="author-thumb">

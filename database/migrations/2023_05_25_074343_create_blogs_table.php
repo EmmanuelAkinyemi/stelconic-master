@@ -13,14 +13,12 @@ return new class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('title');
-            $table->text('content');
+            $table->longText('content');
             $table->string('image')->nullable();
-            $table->string('slug');
-            $table->string('status')->default('draft');
             $table->string('category_id');
-            $table->string('user_id');
+            $table->timestamps();
         });
     }
 
