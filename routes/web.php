@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertyController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,16 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [PropertyController::class, 'index'])->name('index');
-Route::get('/property', [PropertyController::class, 'show']);
-Route::post('/create', [PropertyController::class, 'store'])->name('store');
-// Route::post('/', [PropertyController::class, 'store']);
-
-
-// Route::view('/property', 'property');
-// Route::view('/blog', 'blog');
-// Route::view('/contact', 'contact');
-// Route::view('/signin', 'signin');
-// Route::view('/signup', 'signup');
-// Route::post('/signin', [UserController::class, 'store']);
-// Route::view('/create', 'create');
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/register', [AuthController::class, 'register'])->name('register');

@@ -7,10 +7,6 @@ use \App\Models\Property;
 
 class PropertyController extends Controller
 {
-    public function index() {
-        $properties = Property::all()->sortByDesc("created_at");
-        return view('home', compact('properties'));
-    }
     //get and show single property
     public function show(Property $property)
     {
