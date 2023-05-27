@@ -22,7 +22,6 @@
                         <div class="tab active-tab" id="tab-1">
                             <div class="inner-box">
                                 <h4>Sign up</h4>
-
                                 @if(Session::has('success'))
                                     <div class="alert alert-success">
                                         {{ Session::get('success') }}

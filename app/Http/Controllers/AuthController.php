@@ -41,6 +41,11 @@ class AuthController extends Controller
          return back()->with('error', 'invalid credentials');
     }
 
+    public function dashboard()
+    {
+        return view('admin.dashboard');
+    }
+
     public function logout()
     {
         Auth::logout();
