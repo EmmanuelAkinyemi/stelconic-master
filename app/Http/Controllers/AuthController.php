@@ -35,7 +35,7 @@ class AuthController extends Controller
             'password' => $request->password
         ];
          if (Auth::attempt($credentials)) {
-            return redirect('/')->with('success', 'successfully logged in');
+            return redirect('/dashboard')->with('success', 'successfully logged in');
          }
 
          return back()->with('error', 'invalid credentials');
@@ -45,6 +45,6 @@ class AuthController extends Controller
     {
         Auth::logout();
 
-        return redirect()->route('login');  
+        return redirect()->route('login');
     }
 }

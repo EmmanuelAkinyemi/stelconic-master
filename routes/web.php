@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::group(['middleware' => 'guest'], function () {
+    Route::get('/', [HomeController::class, 'index']);
     Route::get('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'registerUser'])->name('register');
     Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -24,6 +24,5 @@ Route::group(['middleware' => 'guest'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', [HomeController::class, 'index'])->name('index');
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 });

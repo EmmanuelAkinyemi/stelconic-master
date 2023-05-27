@@ -11,6 +11,6 @@ class HomeController extends Controller
     public function index() {
         $properties = Property::all()->sortByDesc("created_at");
         $blogs = Blog::all()->sortByDesc("created_at");
-        return view('home', compact('properties'), compact('properties'));
+        return view('index', compact('properties'), compact('properties'));
     }
 }

@@ -8,7 +8,8 @@
             <div class="outer-box">
                 <div class="main-box">
                     <div class="logo-box">
-                        <figure class="logo"><a href="/"><img src="{{ asset('web/images/logo-light.png') }}" alt=""></a></figure>
+                        <figure class="logo"><a href="/"><img src="{{ asset('web/images/logo-light.png') }}"
+                                    alt=""></a></figure>
                     </div>
                     <div class="menu-area clearfix">
                         <!--Mobile Navigation Toggler-->
@@ -28,23 +29,31 @@
                                     <li class=""><a href="blog"><span>Blog</span></a>
                                     </li>
                                     <li><a href="contact"><span>Contact</span></a></li>
-                                    <li><a href="create"><span>Create</span></a></li>
                                 </ul>
                             </div>
                         </nav>
                     </div>
-                    <div class="menu-right-content clearfix">
-                        <div class="sign-box">
-                            <a href="/login"><i class="fas fa-user"></i>Sign In</a>
+                    @auth
+                        <div class="menu-right-content">
+                            <span class="text-lowercase mx-3">
+                                {{ auth()->user()->email }}
+                            </span>
+                            </li>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <div class="sign-box">
+                                    <button class="btn rounded-pill btn-warning" type="submit"><i class="fas fa-arrow-right text-light"></i></button>
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <div class="sign-box">
-                            <button class="btn btn-danger" type="submit"><i class="fas fa-arrow-left"></i>Logout</a>
+                    @else
+                        <div class="menu-right-content clearfix">
+                            <div class="sign-box">
+                                <a href="/login"><i class="fas fa-user"></i>Sign In</a>
+                            </div>
                         </div>
-                    </form>
+                    @endauth
                 </div>
             </div>
         </div>
@@ -168,52 +177,52 @@
         </div>
     </section>
     <!-- search-field-section end -->
- <!-- chooseus-section -->
- <section style="margin-top:-90px" class="chooseus-section alternate-2 bg-color-1">
-    <div class="auto-container">
-        <div class="upper-box clearfix">
-            <div class="sec-title">
-                <h5>What we do we offer?</h5>
-                <h2>Our Services</h2>
+    <!-- chooseus-section -->
+    <section style="margin-top:-90px" class="chooseus-section alternate-2 bg-color-1">
+        <div class="auto-container">
+            <div class="upper-box clearfix">
+                <div class="sec-title">
+                    <h5>What we do we offer?</h5>
+                    <h2>Our Services</h2>
+                </div>
+                <div class="btn-box">
+                    <a href="#" class="theme-btn btn-one">All Categories</a>
+                </div>
             </div>
-            <div class="btn-box">
-                <a href="#" class="theme-btn btn-one">All Categories</a>
+            <div class="lower-box">
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
+                        <div class="chooseus-block-one">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="icon-19"></i></div>
+                                <h4>Excellent Reputation</h4>
+                                <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
+                        <div class="chooseus-block-one">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="icon-26"></i></div>
+                                <h4>Best Local Agents</h4>
+                                <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
+                        <div class="chooseus-block-one">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="icon-21"></i></div>
+                                <h4>Personalized Service</h4>
+                                <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="lower-box">
-            <div class="row clearfix">
-                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
-                    <div class="chooseus-block-one">
-                        <div class="inner-box">
-                            <div class="icon-box"><i class="icon-19"></i></div>
-                            <h4>Excellent Reputation</h4>
-                            <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
-                    <div class="chooseus-block-one">
-                        <div class="inner-box">
-                            <div class="icon-box"><i class="icon-26"></i></div>
-                            <h4>Best Local Agents</h4>
-                            <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
-                    <div class="chooseus-block-one">
-                        <div class="inner-box">
-                            <div class="icon-box"><i class="icon-21"></i></div>
-                            <h4>Personalized Service</h4>
-                            <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- chooseus-section end -->
+    </section>
+    <!-- chooseus-section end -->
     <!-- cta-section -->
     <section class="cta-section alternate-2 centred"
         style="background-image: url({{ asset('web/images/background/cta-1.jpg') }});">
@@ -239,63 +248,63 @@
                 <h2>Our Best Deals</h2>
             </div>
             @unless (count($properties) == 0)
-            <div class="deals-carousel owl-carousel owl-theme dots-style-one owl-nav-none">
-                @foreach ($properties as $property)
-                <div class="single-item">
-                    <div class="row clearfix">
-                        <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
-                            <div class="image-box">
-                                <figure class="image"><img src="{{ asset('web/images/resource/deals-2.jpg') }}"
-                                        alt=""></figure>
-                                <div class="batch"><i class="icon-11"></i></div>
-                                <span class="category">{{ $property->category }}</span>
-                                <div class="buy-btn"><a href="contact">For Buy</a></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
-                            <div class="deals-block-one">
-                                <div class="inner-box">
-                                    <div class="lower-content">
-                                        <div class="title-text">
-                                            <h4><a href="property">{{ $property->title }}</a></h4>
-                                        </div>
-                                        <div class="price-box clearfix">
-                                            <div class="price-info pull-left">
-                                                <h6>Start From</h6>
-                                                <h4>#{{ $property->price }}</h4>
+                <div class="deals-carousel owl-carousel owl-theme dots-style-one owl-nav-none">
+                    @foreach ($properties as $property)
+                        <div class="single-item">
+                            <div class="row clearfix">
+                                <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
+                                    <div class="image-box">
+                                        <figure class="image"><img src="{{ asset('web/images/resource/deals-2.jpg') }}"
+                                                alt=""></figure>
+                                        <div class="batch"><i class="icon-11"></i></div>
+                                        <span class="category">{{ $property->category }}</span>
+                                        <div class="buy-btn"><a href="contact">For Buy</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
+                                    <div class="deals-block-one">
+                                        <div class="inner-box">
+                                            <div class="lower-content">
+                                                <div class="title-text">
+                                                    <h4><a href="property">{{ $property->title }}</a></h4>
+                                                </div>
+                                                <div class="price-box clearfix">
+                                                    <div class="price-info pull-left">
+                                                        <h6>Start From</h6>
+                                                        <h4>#{{ $property->price }}</h4>
+                                                    </div>
+                                                    <div class="author-box pull-right">
+                                                        <figure class="author-thumb">
+                                                            <img src="{{ asset('web/images/feature/author-1.jpg') }}"
+                                                                alt="">
+                                                            <span>Michael Bean</span>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                                <p>{{ $property->price }}</p>
+                                                <ul class="more-details clearfix">
+                                                    <li><i class="icon-14"></i>3 Beds</li>
+                                                    <li><i class="icon-15"></i>2 Baths</li>
+                                                    <li><i class="icon-16"></i>600 Sq Ft</li>
+                                                </ul>
+                                                <div class="other-info-box clearfix">
+                                                    <div class="btn-box pull-left"><a href="property"
+                                                            class="theme-btn btn-one">See Details</a></div>
+                                                    <ul class="other-option pull-right clearfix">
+                                                        <li><a href="property"><i class="icon-12"></i></a>
+                                                        </li>
+                                                        <li><a href="property"><i class="icon-13"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div class="author-box pull-right">
-                                                <figure class="author-thumb">
-                                                    <img src="{{ asset('web/images/feature/author-1.jpg') }}"
-                                                        alt="">
-                                                    <span>Michael Bean</span>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                        <p>{{ $property->price }}</p>
-                                        <ul class="more-details clearfix">
-                                            <li><i class="icon-14"></i>3 Beds</li>
-                                            <li><i class="icon-15"></i>2 Baths</li>
-                                            <li><i class="icon-16"></i>600 Sq Ft</li>
-                                        </ul>
-                                        <div class="other-info-box clearfix">
-                                            <div class="btn-box pull-left"><a href="property"
-                                                    class="theme-btn btn-one">See Details</a></div>
-                                            <ul class="other-option pull-right clearfix">
-                                                <li><a href="property"><i class="icon-12"></i></a>
-                                                </li>
-                                                <li><a href="property"><i class="icon-13"></i></a>
-                                                </li>
-                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
-                @endforeach
-            </div>
             @else
                 <p style="text-align:center">Deals are currently offline</p>
             @endunless
