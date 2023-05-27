@@ -35,9 +35,16 @@
                     </div>
                     <div class="menu-right-content clearfix">
                         <div class="sign-box">
-                            <a href="/signin"><i class="fas fa-user"></i>Sign In</a>
+                            <a href="/login"><i class="fas fa-user"></i>Sign In</a>
                         </div>
                     </div>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <div class="sign-box">
+                            <button class="btn btn-danger" type="submit"><i class="fas fa-arrow-left"></i>Logout</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -16,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/register', [AuthController::class, 'register'])->name('register');
+    Route::post('/register', [AuthController::class, 'registerUser'])->name('register');
+    Route::get('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/login', [AuthController::class, 'loginUser'])->name('login');
+});
 
-Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', [HomeController::class, 'index'])->name('index');
+    Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
+});

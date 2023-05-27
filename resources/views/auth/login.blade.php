@@ -8,8 +8,8 @@
         <div class="row clearfix">
             <div class="col-xl-8 col-lg-12 col-md-12 offset-xl-2 big-column">
                 <div class="sec-title">
-                    <h5>Sign up</h5>
-                    <h2>Create an account with Stelconic</h2>
+                    <h5>Login</h5>
+                    <h2>Login your account</h2>
                 </div>
                 <div class="tabs-box">
                     <div class="tab-btn-box">
@@ -23,17 +23,13 @@
                             <div class="inner-box">
                                 <h4>Sign up</h4>
 
-                                @if(Session::has('success'))
-                                    <div class="alert alert-success">
-                                        {{ Session::get('success') }}
+                                @if(Session::has('error'))
+                                    <div class="alert alert-danger">
+                                        {{ Session::get('error') }}
                                     </div>
                                 @endif
-                                <form action="{{ route('register') }}" method="post" class="default-form">
+                                <form action="{{ route('login') }}" method="post" class="default-form">
                                     @csrf
-                                    <div class="form-group">
-                                        <label>Agent name</label>
-                                        <input type="text" name="name" required="">
-                                    </div>
                                     <input type="text" name="usertype" value="agent" hidden>
                                     <div class="form-group">
                                         <label>Email address</label>
@@ -43,28 +39,20 @@
                                         <label>Password</label>
                                         <input type="password" name="password" required="">
                                     </div>
-                                    <div class="form-group">
-                                        <label>Confirm Password</label>
-                                        <input type="password" name="password" required="">
-                                    </div>
                                     <div class="form-group message-btn">
-                                        <button type="submit" class="theme-btn btn-one">Sign up</button>
+                                        <button type="submit" class="theme-btn btn-one">Sign in</button>
                                     </div>
                                 </form>
                                 <div class="othre-text">
-                                    <p>Already have an account? <a href="login">Sign in</a></p>
+                                    <p>Don't have an account? <a href="register">Sign in</a></p>
                                 </div>
                             </div>
                         </div>
                         <div class="tab" id="tab-2">
                             <div class="inner-box">
                                 <h4>Sign up</h4>
-                                <form action="{{ route('register') }}" method="post" class="default-form">
+                                <form action="{{ route('login') }}" method="post" class="default-form">
                                     @csrf
-                                    <div class="form-group">
-                                        <label>User name</label>
-                                        <input type="text" name="name" required>
-                                    </div>
                                         <input type="text" name="usertype" value="user" hidden>
                                     <div class="form-group">
                                         <label>Email address</label>
@@ -74,16 +62,12 @@
                                         <label>Password</label>
                                         <input type="password" name="password" required>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Confirm Password</label>
-                                        <input type="password" name="password" required>
-                                    </div>
                                     <div class="form-group message-btn">
-                                        <button type="submit" class="theme-btn btn-one">Sign up</button>
+                                        <button type="submit" class="theme-btn btn-one">Sign in</button>
                                     </div>
                                 </form>
                                 <div class="othre-text">
-                                    <p>Already have an account? <a href="login>Sign in</a></p>
+                                    <p>Don't have an account? <a href="register">Register</a></p>
                                 </div>
                             </div>
                         </div>
