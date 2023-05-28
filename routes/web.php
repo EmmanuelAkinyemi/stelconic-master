@@ -26,8 +26,8 @@ Route::group(['middleware' => 'guest'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
-    Route::get('/viewProperties', [PropertyController::class, 'properties'])->name('viewProperties');
+    Route::get('/viewProperties', [PropertyController::class, 'manage'])->name('viewProperties');
     Route::get('/create-property', [PropertyController::class, 'create'])->name('create-property');
-    Route::post('/create-property', [PropertyController::class, 'store'])->name('create-property');
+    Route::post('/create-property', [PropertyController::class, 'store'])->name('store');
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 });

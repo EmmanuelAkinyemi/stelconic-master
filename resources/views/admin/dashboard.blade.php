@@ -39,7 +39,7 @@
                                 <div class="card-body p-4">
                                     <div class="media">
                                         <span class="me-3">
-                                            <i class="la la-user"></i>
+                                            <i class="la la-list"></i>
                                         </span>
                                         <div class="media-body text-white">
                                             <p class="mb-1">Properties</p>
@@ -58,7 +58,7 @@
                                 <div class="card-body p-4">
                                     <div class="media">
                                         <span class="me-3">
-                                            <i class="la la-graduation-cap"></i>
+                                            <i class="la la-pencil"></i>
                                         </span>
                                         <div class="media-body text-white">
                                             <p class="mb-1">Articles</p>
@@ -77,10 +77,10 @@
                                 <div class="card-body p-4">
                                     <div class="media">
                                         <span class="me-3">
-                                            <i class="la la-dollar"></i>
+                                            <i class="la la-user"></i>
                                         </span>
                                         <div class="media-body text-white">
-                                            <p class="mb-1">Fees Collect</p>
+                                            <p class="mb-1">Agents</p>
                                             <h3 class="text-white">250$</h3>
                                             <div class="progress mb-2 bg-secondary">
                                                 <div class="progress-bar progress-animated bg-light" style="width: 30%"></div>

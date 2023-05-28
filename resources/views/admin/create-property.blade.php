@@ -18,19 +18,21 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-form">
-                            <form method="POST" action="">
+                            <form method="POST" action="{{ route('store') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6">
+                                        <label class="me-sm-2">Property Title</label>
                                         <div class="mb-3">
                                             <input type="text" name="title" class="form-control input-rounded "
-                                                placeholder="Title">
+                                                placeholder="e.g : Glory villa">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6">
+                                        <label class="me-sm-2">Price</label>
                                         <div class="mb-3">
                                             <input type="number" name="price" class="form-control input-rounded"
-                                                placeholder="#300,000">
+                                                placeholder="e.g :#300,000">
                                         </div>
                                     </div>
                                 </div>
@@ -53,6 +55,11 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
+                                    <label class="me-sm-2">Cover photo</label>
+                                    <input type="file" class="form-control input-rounded"">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="me-sm-2">Description</label>
                                     <textarea name="description" class="form-control" rows="6" id="description" placeholder="Lorem Ipsum..."></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Create</button>

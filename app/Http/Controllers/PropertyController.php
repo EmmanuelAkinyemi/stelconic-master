@@ -23,9 +23,6 @@ class PropertyController extends Controller
         ]);
     }
 
-    public function showProperties(){
-        return view('');
-    }
     //get and show single Property
     public function show(Property $Property)
     {
@@ -40,6 +37,7 @@ class PropertyController extends Controller
         return view('admin.create-property');
     }
 
+    //creates the property and stores in the database
     public function store(Request $request)
     {
         $formFields = $request->validate([
@@ -108,6 +106,6 @@ class PropertyController extends Controller
 
     public function manage()
     {
-        return view('Propertys.manage', ['listings' => auth()->user()->properties()->get()]);
+        return view('admin.viewProperties', ['properties' => auth()->user()->properties()->get()]);
     }
 }
