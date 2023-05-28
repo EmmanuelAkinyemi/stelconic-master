@@ -22,7 +22,7 @@ class AuthController extends Controller
 
         $user->save();
 
-        return back()->with('success', 'Registration successfully done');
+        return redirect('/dashboard')->with('success', 'Registration successfully done');
     }
 
     public function login() {

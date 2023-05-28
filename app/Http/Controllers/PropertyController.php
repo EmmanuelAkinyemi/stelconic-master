@@ -16,6 +16,16 @@ class PropertyController extends Controller
         ]);
     }
 
+    //show the properties in a tabular format in the admin dashboard
+    public function properties(){
+        return view('admin.viewProperties', [
+            'properties' => Property::all()
+        ]);
+    }
+
+    public function showProperties(){
+        return view('');
+    }
     //get and show single Property
     public function show(Property $Property)
     {
@@ -27,7 +37,7 @@ class PropertyController extends Controller
     //show create form
     public function create()
     {
-        return view('Properties.create');
+        return view('admin.create-property');
     }
 
     public function store(Request $request)

@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('images')->nullable();
             $table->string('price');
             $table->string('category');
+            $table->string('location');
+            $table->string('status')->default('available');
             $table->longText('description');
             $table->timestamps();
         });

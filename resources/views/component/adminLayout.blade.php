@@ -18,9 +18,10 @@
     <title>Stelconic - Unlock real estate potential with Stelconic</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset("admin/images/favicon.png") }}">
-    <link href="vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
+    <link href="{{ asset("admin/vendor/jqvmap/css/jqvmap.min.css") }}" rel="stylesheet">
 	<!-- Vectormap -->
     <link href="{{ asset("admin/vendor/jqvmap/css/jqvmap.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("admin/vendor/datatables/css/jquery.dataTables.min.css") }}" rel="stylesheet">
     <link href="{{ asset("admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css") }}" rel="stylesheet">
     <link href="{{ asset("admin/css/style.css") }}" rel="stylesheet">
 	<link href="{{ asset("admin/../../cdn.lineicons.com/2.0/LineIcons.css") }}" rel="stylesheet">
@@ -47,7 +48,6 @@
         Main wrapper start
     ***********************************-->
     <div id="main-wrapper">
-
         <!--**********************************
             Nav header start
         ***********************************-->
@@ -200,6 +200,9 @@
 	<!-- Dashboard 1 -->
 	<script src="{{ asset("admin/js/dashboard/dashboard-1.js") }}"></script>
 
+    <!-- Datatable -->
+    <script src="{{ asset("admin/vendor/datatables/js/jquery.dataTables.min.js") }}"></script>
+    <script src="{{ asset("admin/js/plugins-init/datatables.init.js") }}"></script>
 	<script>
 		function carouselReview(){
 			/*  testimonial one function by = owl.carousel.js */
