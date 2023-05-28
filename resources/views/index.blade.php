@@ -36,7 +36,7 @@
                     @auth
                         <div class="menu-right-content">
                             <span class="text-lowercase mx-3">
-                                {{ auth()->user()->email }}
+                                <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
                             </span>
                             </li>
                             <form action="{{ route('logout') }}" method="POST">

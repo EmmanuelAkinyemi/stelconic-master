@@ -23,7 +23,7 @@
     <link href="{{ asset("admin/vendor/jqvmap/css/jqvmap.min.css") }}" rel="stylesheet">
     <link href="{{ asset("admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css") }}" rel="stylesheet">
     <link href="{{ asset("admin/css/style.css") }}" rel="stylesheet">
-	<link href="../../cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+	<link href="{{ asset("admin/../../cdn.lineicons.com/2.0/LineIcons.css") }}" rel="stylesheet">
 	<link href="{{ asset("admin/vendor/owl-carousel/owl.carousel.css") }}" rel="stylesheet">
 
 </head>
@@ -142,20 +142,15 @@
 							<span class="nav-text">Apps</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="profile">Profile</a></li>
                                 <ul aria-expanded="false">
-									<li><a href="#">Product Details</a></li>
-									<li><a href="#">Invoice</a></li>
-									<li><a href="#">Customers</a></li>
+									<li><a href="viewProperties">Porperties</a></li>
+									<li><a href="viewArticles">Articles</a></li>
+									<li><a href="vewUsers">Users</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                 </ul>
-
-				<div class="copyright">
-					<p><strong>stelconic</strong> © 2023 All Rights Reserved</p>
-				</div>
 			</div>
         </div>
         <!--**********************************

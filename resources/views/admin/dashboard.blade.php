@@ -40,7 +40,7 @@
                                                 <span class="sr-only">86% Complete</span>
                                             </div>
                                         </div>
-                                        <span class="fs-14">431 more to break last month record</span>
+                                        <span class="fs-14">Properties on your record</span>
                                     </div>
                                     <span class="fs-46 font-w500">4,562</span>
                                 </div>
