@@ -45,20 +45,19 @@ class PropertyController extends Controller
             'price' => ['required'],
             'location' => 'required',
             'category' => 'required',
-            'email' => ['required', 'email'],
             'description' => 'required'
         ]);
 
-        if($request->hasFile('logo'))
+        if($request->hasFile('images'))
         {
-            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+            $formFields['images'] = $request->file('images')->store('images', 'public');
         }
 
         $formFields['user_id'] = auth()->id();
 
         Property::create($formFields);
 
-        return redirect('/')->with('message', 'Property created successfully!');
+        return redirect('/viewProperties')->with('message', 'Property created successfully!');
     }
 
     public function edit(Property $Property)
@@ -76,17 +75,16 @@ class PropertyController extends Controller
 
         $formFields = $request->validate([
             'title' => 'required',
-            'company' => ['required'],
+            'price' => ['required'],
             'location' => 'required',
-            'website' => 'required',
+            'category' => 'required',
             'email' => ['required', 'email'],
-            'tags' => 'required',
             'description' => 'required'
         ]);
 
-        if($request->hasFile('logo'))
+        if($request->hasFile('images'))
         {
-            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+            $formFields['images'] = $request->file('images')->store('images', 'public');
         }
 
         $Property->update($formFields);

@@ -26,6 +26,9 @@
                                         <div class="mb-3">
                                             <input type="text" name="title" class="form-control input-rounded "
                                                 placeholder="e.g : Glory villa">
+                                            @error('title')
+                                                <p class="text-danger text-xs mt-1">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6">
@@ -33,24 +36,34 @@
                                         <div class="mb-3">
                                             <input type="number" name="price" class="form-control input-rounded"
                                                 placeholder="e.g :#300,000">
+                                            @error('price')
+                                                <p class="text-danger text-xs mt-1">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row align-items-center mb-3">
                                     <div class="col-xl-6 col-lg-6 my-1">
                                         <label class="me-sm-2">Category</label>
-                                        <select name="category" class="me-sm-2 default-select-rounded input form-control wide"
+                                        <select name="category"
+                                            class="me-sm-2 default-select-rounded input form-control wide"
                                             id="inlineFormCustomSelect">
                                             <option selected>Choose...</option>
-                                            <option value="1">Rent</option>
-                                            <option value="2">Sale</option>
+                                            <option value="Rent">Rent</option>
+                                            <option value="Sale">Sale</option>
                                         </select>
+                                        @error('category')
+                                            <p class="text-danger text-xs mt-1">{{ $message }}</p>
+                                        @enderror
                                     </div>
                                     <div class="col-xl-6 col-lg-6 my-1">
                                         <label class="me-sm-2">Location</label>
                                         <div class="me-sm-2">
                                             <input type="text" name="location" class="form-control input-rounded"
                                                 placeholder="e.g :Agu awka">
+                                            @error('location')
+                                                <p class="text-danger text-xs mt-1">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -61,6 +74,9 @@
                                 <div class="mb-3">
                                     <label class="me-sm-2">Description</label>
                                     <textarea name="description" class="form-control" rows="6" id="description" placeholder="Lorem Ipsum..."></textarea>
+                                    @error('description')
+                                        <p class="text-danger text-xs mt-1">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <button type="submit" class="btn btn-primary">Create</button>
                             </form>

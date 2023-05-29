@@ -33,6 +33,7 @@
                             <tbody>
                                 @unless ($properties->isEmpty())
                                     @foreach ($properties as $property)
+                                    
                                         <tr>
                                             <td>1</td>
                                             <td><a href="/properties/{{ $property->id }}">
@@ -40,13 +41,13 @@
                                             </a></td>
                                             <td>System Architect</td>
                                             <td>Rent</td>
-                                            <td><span class="badge light badge-success">Sold</span></td>
+                                            <td><span class="badge light badge-success">{{ $property->status }}</span></td>
                                             <td>
                                                 <div class="d-flex">
-                                                    <a href="/listings/{{ $property->id }}/edit" class="btn btn-primary shadow btn-xs sharp me-1"><i
+                                                    <a href="/admin/{{ $property->id }}/edit" class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                             class="fas fa-pencil-alt"></i></a>
 
-                                                    <form action="/listings/{{ $property->id }}" method="post">
+                                                    <form action="/admin/{{ $property->id }}" method="post">
                                                             @csrf
                                                             @method('DELETE')
                                                         <button href="#" class="btn btn-danger shadow btn-xs sharp"><i
