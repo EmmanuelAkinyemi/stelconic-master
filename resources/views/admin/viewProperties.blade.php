@@ -8,7 +8,7 @@
                 <h2 class="text-black font-w600">Properties</h2>
                 <p class="mb-0">{{ auth()->user()->name }}</p>
             </div>
-            <a href="index.html" class="btn btn-primary rounded light me-3">Refresh</a>
+            <a href="viewProperties" class="btn btn-primary rounded light me-3">Refresh</a>
             <a href="create-property" class="btn btn-primary rounded"><i class="fas fa-plus me-0"></i></a>
         </div>
 
@@ -33,14 +33,14 @@
                             <tbody>
                                 @unless ($properties->isEmpty())
                                     @foreach ($properties as $property)
-                                    
+
                                         <tr>
-                                            <td>1</td>
+                                            <td>{{ $property->id }}</td>
                                             <td><a href="/properties/{{ $property->id }}">
                                                 {{ $property->title }}
                                             </a></td>
                                             <td>System Architect</td>
-                                            <td>Rent</td>
+                                            <td>{{ $property->category }}</td>
                                             <td><span class="badge light badge-success">{{ $property->status }}</span></td>
                                             <td>
                                                 <div class="d-flex">
