@@ -36,7 +36,7 @@
 
                                         <tr>
                                             <td>{{ $property->id }}</td>
-                                            <td><a href="/properties/{{ $property->id }}">
+                                            <td><a href="">
                                                 {{ $property->title }}
                                             </a></td>
                                             <td><span class="text-info">#{{ $property->price }}</span></td>
@@ -44,7 +44,7 @@
                                             <td><span class="badge light badge-success">{{ $property->status }}</span></td>
                                             <td>
                                                 <div class="d-flex">
-                                                    <a href="/admin/{{ $property->id }}/edit" class="btn btn-primary shadow btn-xs sharp me-1"><i
+                                                    <a href="admin/{{ $property->id }}/edit-property" class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                             class="fas fa-pencil-alt"></i></a>
 
                                                     <form action="/admin/{{ $property->id }}" method="post">

@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="me-sm-2">Cover photo</label>
-                                    <input type="file" class="form-control input-rounded"">
+                                    <input type="file" name="images" class="form-control input-rounded"">
                                 </div>
                                 <div class="mb-3">
                                     <label class="me-sm-2">Description</label>

@@ -62,13 +62,13 @@ class PropertyController extends Controller
 
     public function edit(Property $Property)
     {
-        return view('Propertys.edit', ['Property' => $Property]);
+        return view('admin.edit-property', ['Property' => $Property]);
     }
 
     public function update(Request $request, Property $Property)
     {
 
-        if($Property->user_id !=auth()->id())
+        if($Property->user_id != auth()->id())
         {
             abort(403, 'Unauthorized Action');
         }
