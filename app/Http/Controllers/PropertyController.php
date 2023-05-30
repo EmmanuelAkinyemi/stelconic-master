@@ -9,9 +9,9 @@ use Illuminate\Validation\Rule;
 class PropertyController extends Controller
 {
     //get and show all Properties on the client side
-    public function view()
+    public function list()
     {
-        return view('properties.show', [
+        return view('properties.list', [
             'Properties' => Property::latest()->filter(request(['category', 'search']))->paginate(4)
         ]);
     }

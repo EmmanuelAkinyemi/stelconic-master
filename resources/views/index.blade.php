@@ -271,7 +271,7 @@
                                         <div class="inner-box">
                                             <div class="lower-content">
                                                 <div class="title-text">
-                                                    <h4><a href="property">{{ $property->title }}</a></h4>
+                                                    <h4 class="text-capitalize"><a href="/properties/{{ $property->id }}">{{ $property->title }}</a></h4>
                                                 </div>
                                                 <div class="price-box clearfix">
                                                     <div class="price-info pull-left">
