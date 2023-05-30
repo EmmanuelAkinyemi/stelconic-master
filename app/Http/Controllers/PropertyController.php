@@ -60,9 +60,9 @@ class PropertyController extends Controller
         return redirect('/viewProperties')->with('message', 'Property created successfully!');
     }
 
-    public function edit(Property $Property)
+    public function edit(Property $property)
     {
-        return view('admin.edit-property', ['Property' => $Property]);
+        return view('admin.edit-property', ['property' => $property]);
     }
 
     public function update(Request $request, Property $Property)
@@ -78,7 +78,7 @@ class PropertyController extends Controller
             'price' => ['required'],
             'location' => 'required',
             'category' => 'required',
-            'email' => ['required', 'email'],
+            'status' => 'required',
             'description' => 'required'
         ]);
 
@@ -89,17 +89,17 @@ class PropertyController extends Controller
 
         $Property->update($formFields);
 
-        return back()->with('message', 'Property updated successfully!');
+        return redirect('/viewProperties')->with('message', 'Property updated successfully!');
     }
 
     public function destroy(Property $property)
     {
         if($property->user_id !=auth()->id())
-        {
+        {       
             abort(403, 'Unauthorized Action');
         }
         $property->delete();
-        return redirect('/')->with('message', 'Property deleted successfully!');
+        return redirect('/viewProperties')->with('message', 'Property deleted successfully!');
     }
 
     public function manage()

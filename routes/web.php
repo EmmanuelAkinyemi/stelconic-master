@@ -43,6 +43,9 @@ Route::group(['middleware' => 'auth'], function () {
     //updates the property record on admin side
     Route::put('/admin/{property}', [PropertyController::class, 'update'])->name('update');
 
+    //deletes listed properties
+    Route::delete('/admin/{property}', [PropertyController::class, 'destroy'])->name('destroy');
+
     //this logs out the authicated user
-    Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });

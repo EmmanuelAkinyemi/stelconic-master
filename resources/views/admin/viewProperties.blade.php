@@ -36,9 +36,7 @@
 
                                         <tr>
                                             <td>{{ $property->id }}</td>
-                                            <td><a href="">
-                                                {{ $property->title }}
-                                            </a></td>
+                                            <td>{{ $property->title }}</td>
                                             <td><span class="text-info">#{{ $property->price }}</span></td>
                                             <td>{{ $property->category }}</td>
                                             <td><span class="badge light badge-success">{{ $property->status }}</span></td>

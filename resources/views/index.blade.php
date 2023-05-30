@@ -254,11 +254,15 @@
                             <div class="row clearfix">
                                 <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
                                     <div class="image-box">
-                                        <figure class="image"><img src="{{ asset('web/images/resource/deals-2.jpg') }}"
-                                                alt=""></figure>
+                                        <figure class="image">
+                                            <img
+                                            class="img-fluid"
+                                            src="{{ $property->images ? asset('storage/' . $property->images) : asset('images/no-image.jpeg') }}"
+                                            alt="{{ $property->title }}"
+                                            />
+                                        </figure>
                                         <div class="batch"><i class="icon-11"></i></div>
                                         <span class="category">{{ $property->category }}</span>
-                                        <div class="buy-btn"><a href="contact">For Buy</a></div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
@@ -275,11 +279,6 @@
                                                     </div>
                                                 </div>
                                                 <p>{{ $property->price }}</p>
-                                                <ul class="more-details clearfix">
-                                                    <li><i class="icon-14"></i>3 Beds</li>
-                                                    <li><i class="icon-15"></i>2 Baths</li>
-                                                    <li><i class="icon-16"></i>600 Sq Ft</li>
-                                                </ul>
                                                 <div class="other-info-box clearfix">
                                                     <div class="btn-box pull-left"><a href="property"
                                                             class="theme-btn btn-one">See Details</a></div>

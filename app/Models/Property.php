@@ -9,7 +9,7 @@ class Property extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'title', 'price', 'location', 'images', 'category', 'description'];
+    protected $fillable = ['user_id', 'title', 'price', 'location', 'images', 'status', 'category', 'description'];
 
     public function scopeFilter($query, array $filters)
     {
