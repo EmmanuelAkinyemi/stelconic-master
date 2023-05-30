@@ -150,7 +150,8 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 content-side">
                     <div class="property-details-content">
                         <img
-                            class="rounded img-fluid shadow-lg h-75 mb-2"
+                            style="height: 700px; width: 100%; position:relative"
+                            class="rounded img-fluid shadow-lg mb-2"
                             src="{{ $property->images ? asset('storage/' . $property->images) : asset('images/no-image.jpeg') }}"
                             alt="{{ $property->title }}"
                         />

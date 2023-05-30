@@ -12,7 +12,7 @@ class PropertyController extends Controller
     public function list()
     {
         return view('properties.list', [
-            'Properties' => Property::latest()->filter(request(['category', 'search']))->paginate(4)
+            'properties' => Property::latest()->filter(request(['category', 'search']))->paginate(4)
         ]);
     }
 

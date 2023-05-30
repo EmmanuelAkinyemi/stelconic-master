@@ -140,17 +140,6 @@
                                 <h5>Search Reasults: <span>Showing 1-5 of 20 Properties</span></h5>
                             </div>
                             <div class="right-column pull-right clearfix">
-                                <div class="short-box clearfix">
-                                    <div class="select-box">
-                                        <select class="wide">
-                                            <option data-display="Sort by: Newest">Sort by: Newest</option>
-                                            <option value="1">New Arrival</option>
-                                            <option value="2">Top Rated</option>
-                                            <option value="3">Offer Place</option>
-                                            <option value="4">Most Place</option>
-                                        </select>
-                                    </div>
-                                </div>
                                 <div class="short-menu clearfix">
                                     <button class="list-view on"><i class="icon-35"></i></button>
                                     <button class="grid-view"><i class="icon-36"></i></button>
@@ -165,42 +154,40 @@
                                         <div class="deals-block-one">
                                             <div class="inner-box">
                                                 <div class="image-box">
-                                                    <figure class="image"><img
-                                                            src="{{ asset('web/images/resource/deals-3.jpg') }}"
-                                                            alt=""></figure>
+                                                    <figure class="image">
+                                                        <img
+                                                            style="height:350px; width:100%"
+                                                            src="{{ $property->images ? asset('storage/' . $property->images) : asset('images/no-image.jpeg') }}"
+                                                            alt="{{ $property->title }}"
+                                                        />
+                                                    </figure>
                                                     <div class="batch"><i class="icon-11"></i></div>
-                                                    <span class="category">Featured</span>
-                                                    <div class="buy-btn"><a href="property-details.html">For Buy</a></div>
+                                                    <span class="category">{{ $property->category }}</span>
                                                 </div>
                                                 <div class="lower-content">
                                                     <div class="title-text">
-                                                        <h4><a href="property-details.html">{{ $property->title }}</a></h4>
+                                                        <h4 class="text-capitalize"><a href="/properties/{{ $property->id }}">{{ $property->title }}</a></h4>
                                                     </div>
                                                     <div class="price-box clearfix">
                                                         <div class="price-info pull-left">
                                                             <h6>Start From</h6>
-                                                            <h4>{{ $property->price }}</h4>
-                                                        </div>
-                                                        <div class="author-box pull-right">
-                                                            <figure class="author-thumb">
-                                                                <img src="assets/images/feature/author-1.jpg" alt="">
-                                                                <span>Michael Bean</span>
-                                                            </figure>
+                                                            <h4># {{ $property->price }}</h4>
                                                         </div>
                                                     </div>
-                                                    <p>{{ $property->price }}</p>
-                                                    <ul class="more-details clearfix">
-                                                        <li><i class="icon-14"></i>3 Beds</li>
-                                                        <li><i class="icon-15"></i>2 Baths</li>
-                                                        <li><i class="icon-16"></i>600 Sq Ft</li>
-                                                    </ul>
+                                                    <p
+                                                        style="width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;"
+                                                        >
+                                                        {{ $property->description }}
+                                                    </p>
                                                     <div class="other-info-box clearfix">
-                                                        <div class="btn-box pull-left"><a href="#"
-                                                                class="theme-btn btn-two">See Details</a></div>
+                                                        <div class="btn-box pull-left">
+                                                            <a 
+                                                                href="/properties/{{ $property->id}}"
+                                                                class="theme-btn btn-two">See Details
+                                                            </a>
+                                                        </div>
                                                         <ul class="other-option pull-right clearfix">
-                                                            <li><a href="property-details.html"><i class="icon-12"></i></a>
-                                                            </li>
-                                                            <li><a href="property-details.html"><i class="icon-13"></i></a>
+                                                            <li><span><i class="icon-12"></i></span>
                                                             </li>
                                                         </ul>
                                                     </div>

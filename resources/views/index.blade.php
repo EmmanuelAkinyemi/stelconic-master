@@ -24,7 +24,7 @@
                                     <li class="current"><a href="/"><span>Home</span></a>
                                     </li>
 
-                                    <li class=""><a href="property"><span>Property</span></a>
+                                    <li class=""><a href="properties"><span>Property</span></a>
                                     </li>
                                     <li class=""><a href="blog"><span>Blog</span></a>
                                     </li>
