@@ -256,7 +256,8 @@
                                     <div class="image-box">
                                         <figure class="image">
                                             <img
-                                            class="img-fluid"
+                                            class="image"
+                                            style="height:350px; position:relative"
                                             src="{{ $property->images ? asset('storage/' . $property->images) : asset('images/no-image.jpeg') }}"
                                             alt="{{ $property->title }}"
                                             />

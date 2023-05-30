@@ -25,9 +25,13 @@ Route::group(['middleware' => 'guest'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
+
     //shows the admin dashboard
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
+    //shows the properties section on the client side
+    Route::get('/properties/{property}', [PropertyController::class, 'show'])->name('show');
+    
     //shows the properties section on the admin side
     Route::get('/viewProperties', [PropertyController::class, 'manage'])->name('viewProperties');
 

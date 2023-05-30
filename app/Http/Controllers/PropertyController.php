@@ -8,30 +8,31 @@ use Illuminate\Validation\Rule;
 
 class PropertyController extends Controller
 {
-    //get and show all Propertys
+    //get and show all Properties on the client side
     public function view()
     {
-        return view('Properties.view', [
+        return view('properties.show', [
             'Properties' => Property::latest()->filter(request(['category', 'search']))->paginate(4)
         ]);
     }
 
+    //get and show single Property on the client side
+    public function show(Property $property)
+    {
+        return view('properties.details', [
+            'property' => $property
+        ]);
+    }
+    //********************************************//
+
     //show the properties in a tabular format in the admin dashboard
-    public function properties(){
+    public function properties()
+    {
         return view('admin.viewProperties', [
             'properties' => Property::all()
         ]);
     }
-
-    //get and show single Property
-    public function show(Property $Property)
-    {
-        return view('Properties.show', [
-            'Property' => $Property
-        ]);
-    }
-
-    //show create form
+    //show create form for the property on the admin section
     public function create()
     {
         return view('admin.create-property');
@@ -48,8 +49,7 @@ class PropertyController extends Controller
             'description' => 'required'
         ]);
 
-        if($request->hasFile('images'))
-        {
+        if ($request->hasFile('images')) {
             $formFields['images'] = $request->file('images')->store('images', 'public');
         }
 
@@ -68,8 +68,7 @@ class PropertyController extends Controller
     public function update(Request $request, Property $Property)
     {
 
-        if($Property->user_id != auth()->id())
-        {
+        if ($Property->user_id != auth()->id()) {
             abort(403, 'Unauthorized Action');
         }
 
@@ -82,8 +81,7 @@ class PropertyController extends Controller
             'description' => 'required'
         ]);
 
-        if($request->hasFile('images'))
-        {
+        if ($request->hasFile('images')) {
             $formFields['images'] = $request->file('images')->store('images', 'public');
         }
 
@@ -94,8 +92,7 @@ class PropertyController extends Controller
 
     public function destroy(Property $property)
     {
-        if($property->user_id !=auth()->id())
-        {       
+        if ($property->user_id != auth()->id()) {
             abort(403, 'Unauthorized Action');
         }
         $property->delete();
