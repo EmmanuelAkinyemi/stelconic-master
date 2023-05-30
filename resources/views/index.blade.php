@@ -273,13 +273,6 @@
                                                         <h6>Start From</h6>
                                                         <h4>#{{ $property->price }}</h4>
                                                     </div>
-                                                    <div class="author-box pull-right">
-                                                        <figure class="author-thumb">
-                                                            <img src="{{ asset('web/images/feature/author-1.jpg') }}"
-                                                                alt="">
-                                                            <span>Michael Bean</span>
-                                                        </figure>
-                                                    </div>
                                                 </div>
                                                 <p>{{ $property->price }}</p>
                                                 <ul class="more-details clearfix">

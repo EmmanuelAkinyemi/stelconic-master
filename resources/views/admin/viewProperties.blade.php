@@ -39,7 +39,7 @@
                                             <td><a href="/properties/{{ $property->id }}">
                                                 {{ $property->title }}
                                             </a></td>
-                                            <td>System Architect</td>
+                                            <td><span class="text-info">#{{ $property->price }}</span></td>
                                             <td>{{ $property->category }}</td>
                                             <td><span class="badge light badge-success">{{ $property->status }}</span></td>
                                             <td>
