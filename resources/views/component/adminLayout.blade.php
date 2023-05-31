@@ -53,9 +53,9 @@
         ***********************************-->
         <div class="nav-header">
             <a href="/" class="brand-logo">
-                <img class="logo-abbr" src="{{ asset("admin/images/logo.png") }}" alt="">
-                <img class="logo-compact" src="{{ asset("admin/images/logo-text.png") }}" alt="">
-                <img class="brand-title" src="{{ asset("admin/images/logo-text.png") }}" alt="">
+                <img class="logo-abbr" src="{{ asset("images/logo/logo_admin.png") }}" alt="stelconic">
+                <img class="logo-compact" src="{{ asset("images/logo/logo_text.png") }}" alt="stelconic">
+                <img class="brand-title" src="{{ asset("images/logo/logo_text.png") }}" alt="stelconic">
             </a>
 
             <div class="nav-control">

@@ -8,7 +8,7 @@
             <div class="outer-box">
                 <div class="main-box">
                     <div class="logo-box">
-                        <figure class="logo"><a href="/"><img src="{{ asset('web/images/logo-light.png') }}"
+                        <figure class="logo"><a href="/"><img src="{{ asset('images/logo/logo.png') }}"
                                     alt=""></a></figure>
                     </div>
                     <div class="menu-area clearfix">
@@ -62,7 +62,7 @@
             <div class="outer-box">
                 <div class="main-box">
                     <div class="logo-box">
-                        <figure class="logo"><a href="index.html"><img src="{{ asset('web/images/logo.png') }}"
+                        <figure class="logo"><a href="index.html"><img src="{{ asset('images/logo/logo.png') }}"
                                     alt=""></a></figure>
                     </div>
                     <div class="menu-area clearfix">
@@ -100,7 +100,7 @@
                 <div class="image-layer" style="background-image:url({{ asset('web/images/banner/banner-4.jpg') }})"></div>
                 <div class="auto-container">
                     <div class="content-box">
-                        <h2></h2>
+                        <h2>Houses with aesthetic design </h2>
                         <p>Amet consectetur adipisicing elit sed do eiusmod.</p>
                     </div>
                 </div>

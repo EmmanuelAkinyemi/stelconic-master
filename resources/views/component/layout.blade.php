@@ -11,7 +11,7 @@
     <title>Stelconic - real estate agency on land and landed properties</title>
 
     <!-- Fav Icon -->
-    <link rel="icon" href="{{ asset('web/images/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/logo/favicon.png') }}" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link
@@ -216,8 +216,8 @@
             <div class="footer-bottom">
                 <div class="auto-container">
                     <div class="inner-box clearfix">
-                        <figure class="footer-logo"><a href="index.html"><img
-                                    src="{{ asset('web/images/footer-logo.png') }}" alt=""></a></figure>
+                        <figure class="footer-logo"><a href="index.html"><img style="width:50px; height:50px"
+                                    src="{{ asset('images/logo/favicon.png') }}" alt=""></a></figure>
                         <div class="copyright pull-left">
                             <p><a href="index.html">Realshed</a> &copy; 2021 All Right Reserved</p>
                         </div>
