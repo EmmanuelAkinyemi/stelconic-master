@@ -8,22 +8,29 @@
             <div class="top-inner clearfix">
                 <div class="left-column pull-left">
                     <ul class="info clearfix">
-                        <li><i class="far fa-map-marker-alt"></i>Discover St, New York, NY 10012, USA</li>
-                        <li><i class="far fa-clock"></i>Mon - Sat 9.00 - 18.00</li>
-                        <li><i class="far fa-phone"></i><a href="tel:2512353256">+251-235-3256</a></li>
+                        <li><i class="far fa-map-marker-alt"></i>Flat , Block D,Millenium Plaza Enugu-Onitsha Express way, Awka, Anambra State</li>
+                        <li><i class="far fa-phone"></i><a href="+2348184007752">+234 818-4007-752</a></li>
                     </ul>
                 </div>
                 <div class="right-column pull-right">
-                    <ul class="social-links clearfix">
-                        <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="index.html"><i class="fab fa-pinterest-p"></i></a></li>
-                        <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
-                        <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
-                    </ul>
+                     @auth
+                     <div class="menu-right-content">
+                        <span class="text-lowercase mx-3">
+                            <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
+                        </span>
+                        </li>
+                        {{-- <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <div class="sign-box">
+                                <button class="btn rounded-pill btn-warning" type="submit"><i class="fas fa-arrow-right text-light"></i></button>
+                            </div>
+                        </form> --}}
+                    </div>
+                    @else
                     <div class="sign-box">
                         <a href="signin"><i class="fas fa-user"></i>Sign In</a>
                     </div>
+                    @endauth
                 </div>
             </div>
         </div>
@@ -47,9 +54,9 @@
                                 <ul class="navigation clearfix">
                                     <li class=""><a href="/"><span>Home</span></a>
                                     </li>
-                                    <li class="current"><a href="property"><span>Property</span></a>
+                                    <li class="current"><a href="properties"><span>Property</span></a>
                                     </li>
-                                    <li class=""><a href="blog"><span>Blog</span></a>
+                                    <li class=""><a href="blogs"><span>Blog</span></a>
                                     </li>
                                     <li><a href="contact"><span>Contact</span></a></li>
                                 </ul>

@@ -39,13 +39,12 @@
                                 <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
                             </span>
                             </li>
-                            <form action="{{ route('logout') }}" method="POST">
+                            {{-- <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                @method('DELETE')
                                 <div class="sign-box">
                                     <button class="btn rounded-pill btn-warning" type="submit"><i class="fas fa-arrow-right text-light"></i></button>
                                 </div>
-                            </form>
+                            </form> --}}
                         </div>
                     @else
                         <div class="menu-right-content clearfix">
@@ -84,7 +83,7 @@
                 <div class="auto-container">
                     <div class="content-box">
                         <h2>Search Properties for Sale and To Rent</h2>
-                        <p>Amet consectetur adipisicing elit sed do eiusmod.</p>
+                        <p>we offer you one of the best properties and land offer.</p>
                     </div>
                 </div>
             </div>
@@ -92,8 +91,8 @@
                 <div class="image-layer" style="background-image:url({{ asset('web/images/banner/banner-3.jpg') }})"></div>
                 <div class="auto-container">
                     <div class="content-box">
-                        <h2>Search Properties for Sale and To Rent</h2>
-                        <p>Amet consectetur adipisicing elit sed do eiusmod.</p>
+                        <h2>Dive into the world of real estate with us </h2>
+                        <p>We offer you great offer on commision and percentage.</p>
                     </div>
                 </div>
             </div>
@@ -101,7 +100,7 @@
                 <div class="image-layer" style="background-image:url({{ asset('web/images/banner/banner-4.jpg') }})"></div>
                 <div class="auto-container">
                     <div class="content-box">
-                        <h2>Search Properties for Sale and To Rent</h2>
+                        <h2></h2>
                         <p>Amet consectetur adipisicing elit sed do eiusmod.</p>
                     </div>
                 </div>

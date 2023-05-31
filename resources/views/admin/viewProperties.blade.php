@@ -48,7 +48,7 @@
                                                     <form action="/admin/{{ $property->id }}" method="post">
                                                             @csrf
                                                             @method('DELETE')
-                                                        <button href="#" class="btn btn-danger shadow btn-xs sharp"><i
+                                                        <button class="btn btn-danger shadow btn-xs sharp"><i
                                                         class="fas fa-trash"></i></button>
                                                     </form>
                                                 </div>

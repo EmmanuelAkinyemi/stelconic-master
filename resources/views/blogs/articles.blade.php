@@ -22,10 +22,10 @@
             <div class="row justify-content-center clearfix">
                 <div class="col-lg-10 col-md-12 col-sm-12 content-side">
                     <div class="blog-grid-content">
-                        <div class="row clearfix">
+                        <div class="row justify-content-center clearfix">
                         @unless (count($blogs) == 0)
                             @foreach ($blogs as $blog)
-                            <div class="col-lg-6 col-md-6 col-sm-12 news-block">
+                            <div class="col-lg-5 col-md-6 col-sm-12 news-block">
                                 <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms"
                                     data-wow-duration="1500ms">
                                     <div class="inner-box">
@@ -33,7 +33,8 @@
                                             <figure class="image">
                                                 <a href="blog-details.html">
                                                     <img
-                                                        src="{{ $blog->images ? asset('storage/' . $blog->image) : asset('images/no-image.jpeg') }}" 
+                                                        style="height:300px; width:100%; position:relative"
+                                                        src="{{ $blog->image ? asset('storage/' . $blog->image) : asset('images/no-image.jpeg') }}" 
                                                         alt="{{ $blog->title }}"
                                                     />
                                                 </a>
@@ -41,13 +42,13 @@
                                             <span class="category">{{ $blog->category }}</span>
                                         </div>
                                         <div class="lower-content">
-                                            <h4><a href="blog-details.html">{{ $blog->title }}</a>
+                                            <h4><a href="/blogs/{{ $blog->id }}">{{ $blog->title }}</a>
                                             </h4>
                                             <div class="text">
-                                                <p>{{ $blog->content }}</p>
+                                                <p style="width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{ $blog->content }}</p>
                                             </div>
                                             <div class="btn-box">
-                                                <a href="#" class="theme-btn btn-two">Read More</a>
+                                                <a href="/blogs/{{ $blog->id }}" class="theme-btn btn-two">Read More</a>
                                             </div>
                                         </div>
                                     </div>

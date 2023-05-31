@@ -19,7 +19,7 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-form">
-                            <form method="POST" action="/admin/{{ $blog->id }}" enctype="multipart/form-data">
+                            <form method="POST" action="/articles/{{ $blog->id }}" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
 
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="me-sm-2">Content</label>
-                                    <textarea name="description" class="form-control" rows="6" id="description">{{ $blog->content }}</textarea>
+                                    <textarea name="content" class="form-control" rows="6" id="description">{{ $blog->content }}</textarea>
                                     @error('description')
                                         <p class="text-danger text-xs mt-1">{{ $message }}</p>
                                     @enderror

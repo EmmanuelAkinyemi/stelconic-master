@@ -71,7 +71,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/{blog}/edit-article', [BlogController::class, 'edit'])->name('edit-article');
 
     //updates the property record on admin side
-    Route::put('/admin/{blog}', [BlogController::class, 'update'])->name('update');
+    Route::put('/articles/{blog}', [BlogController::class, 'update'])->name('update');
 
     //deletes listed properties
     Route::delete('/admin/{property}', [PropertyController::class, 'destroy'])->name('destroy');
