@@ -26,7 +26,7 @@
 
                                     <li class=""><a href="properties"><span>Property</span></a>
                                     </li>
-                                    <li class=""><a href="blog"><span>Blog</span></a>
+                                    <li class=""><a href="blogs"><span>Blog</span></a>
                                     </li>
                                     <li><a href="contact"><span>Contact</span></a></li>
                                 </ul>
@@ -279,7 +279,7 @@
                                                         <h4>#{{ $property->price }}</h4>
                                                     </div>
                                                 </div>
-                                                <p>{{ $property->price }}</p>
+                                                <p style="width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{ $property->description }}</p>
                                                 <div class="other-info-box clearfix">
                                                     <div class="btn-box pull-left"><a href="property"
                                                             class="theme-btn btn-one">See Details</a></div>
@@ -493,109 +493,60 @@
     <!-- place-style-two end -->
 
     <!-- news-section -->
-    <section class="news-section sec-pad">
+    <section class="deals-style-two sec-pad">
         <div class="auto-container">
             <div class="sec-title centred">
-                <h5>News & Article</h5>
-                <h2>Stay Update With Stelconic</h2>
-                <p>Stay upclose by reading through our blogs and articles to get help yourself get more clues on your
-                    <br>preferences, also if you'll have anything to contribute or share
-                </p>
+                <h5>Articles</h5>
+                <p>Stay updated on land and landed property on our blog posts</p>
             </div>
-            <div class="row clearfix">
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><a href="blog-details.html"><img
-                                            src="{{ asset('web/images/news/news-1.jpg') }}" alt=""></a>
-                                </figure>
-                                <span class="category">Featured</span>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="blog-details.html">Including Animation In Your Design System</a></h4>
-                                <ul class="post-info clearfix">
-                                    <li class="author-box">
-                                        <figure class="author-thumb"><img
-                                                src="{{ asset('web/images/news/author-1.jpg') }}" alt="">
+            @unless (count($blogs) == 0)
+                <div class="deals-carousel owl-carousel owl-theme dots-style-one owl-nav-none">
+                    @foreach ($blogs as $blog)
+                        <div class="single-item">
+                            <div class="row clearfix">
+                                <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
+                                    <div class="image-box">
+                                        <figure class="image">
+                                            <img
+                                            class="image"
+                                            style="height:350px; position:relative"
+                                            src="{{ $blog->image ? asset('storage/' . $blog->image) : asset('images/no-image.jpeg') }}"
+                                            alt="{{ $blog->title }}"
+                                            />
                                         </figure>
-                                        <h5><a href="blog-details.html">Eva Green</a></h5>
-                                    </li>
-                                    <li>April 10, 2020</li>
-                                </ul>
-                                <div class="text">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>
+                                        <div class="batch"><i class="icon-11"></i></div>
+                                        <span class="category">{{ $blog->category }}</span>
+                                    </div>
                                 </div>
-                                <div class="btn-box">
-                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>
+                                <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
+                                    <div class="deals-block-one">
+                                        <div class="inner-box">
+                                            <div class="lower-content">
+                                                <div class="title-text">
+                                                    <h4 class="text-capitalize"><a href="/blogs/{{ $blog->id }}">{{ $blog->title }}</a></h4>
+                                                </div>
+                                                <p style="width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{ $blog->content }}</p>
+                                                </div>
+                                                <div class="other-info-box clearfix">
+                                                    <div class="btn-box pull-left">
+                                                        <a 
+                                                            href="/blogs/{{ $blog->id }}"
+                                                            class="theme-btn btn-one">
+                                                            See Details
+                                                        </a>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><a href="blog-details.html"><img
-                                            src="{{ asset('web/images/news/news-2.jpg') }}" alt=""></a>
-                                </figure>
-                                <span class="category">Featured</span>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="blog-details.html">Taking The Pattern Library To The Next Level</a>
-                                </h4>
-                                <ul class="post-info clearfix">
-                                    <li class="author-box">
-                                        <figure class="author-thumb"><img
-                                                src="{{ asset('web/images/news/author-2.jpg') }}" alt="">
-                                        </figure>
-                                        <h5><a href="blog-details.html">George Clooney</a></h5>
-                                    </li>
-                                    <li>April 09, 2020</li>
-                                </ul>
-                                <div class="text">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>
-                                </div>
-                                <div class="btn-box">
-                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><a href="blog-details.html"><img
-                                            src="{{ asset('web/images/news/news-3.jpg') }}" alt=""></a>
-                                </figure>
-                                <span class="category">Featured</span>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="blog-details.html">How New Font Technologies Will Improve The Web</a>
-                                </h4>
-                                <ul class="post-info clearfix">
-                                    <li class="author-box">
-                                        <figure class="author-thumb"><img
-                                                src="{{ asset('web/images/news/author-3.jpg') }}" alt="">
-                                        </figure>
-                                        <h5><a href="blog-details.html">Simon Baker</a></h5>
-                                    </li>
-                                    <li>April 28, 2020</li>
-                                </ul>
-                                <div class="text">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>
-                                </div>
-                                <div class="btn-box">
-                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @else
+                <p style="text-align:center">Deals are currently offline</p>
+            @endunless
         </div>
     </section>
     <!-- news-section end -->

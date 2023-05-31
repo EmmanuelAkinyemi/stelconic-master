@@ -48,4 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Property::class, 'user_id');
     }
+    
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class, 'user_id');
+    }
 }

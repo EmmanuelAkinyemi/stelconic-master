@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,9 +30,15 @@ Route::group(['middleware' => 'auth'], function () {
 
     //shows the admin dashboard
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
-    
-    //shows and display selected property on the section on the client side
+
+    //shows all the properties  on the client
     Route::get('/properties', [PropertyController::class, 'list'])->name('list');
+
+    //shows and display selected article
+    Route::get('/blogs/{blog}', [BlogController::class, 'show'])->name('show');
+
+    //shows all the articles on the client
+    Route::get('/blogs', [BlogController::class, 'list'])->name('list');
 
     //shows and display selected property on the section on the client side
     Route::get('/properties/{property}', [PropertyController::class, 'show'])->name('show');
@@ -51,8 +58,26 @@ Route::group(['middleware' => 'auth'], function () {
     //updates the property record on admin side
     Route::put('/admin/{property}', [PropertyController::class, 'update'])->name('update');
 
+    //shows the properties section on the admin side
+    Route::get('/viewArticles', [BlogController::class, 'manage'])->name('viewProperties');
+
+    //shows the form for creating properties on the admin side
+    Route::get('/create-articles', [BlogController::class, 'create'])->name('create-articles');
+
+    //creates the properties on the admin side
+    Route::post('/create-articles', [BlogController::class, 'store'])->name('store');
+
+    //shows the edit form for the properties on the admin side
+    Route::get('/admin/{blog}/edit-article', [BlogController::class, 'edit'])->name('edit-article');
+
+    //updates the property record on admin side
+    Route::put('/admin/{blog}', [BlogController::class, 'update'])->name('update');
+
     //deletes listed properties
     Route::delete('/admin/{property}', [PropertyController::class, 'destroy'])->name('destroy');
+
+    //deletes listed properties
+    Route::delete('/admin/{blog}', [BlogController::class, 'destroy'])->name('destroy');
 
     //this logs out the authicated user
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
