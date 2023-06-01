@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,7 +55,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
     //renders the view for team members on the dashboard
-    Route::view('/team', 'admin.team');
+    Route::get('/team', [TeamController::class, 'team'])->name('team');
 
     //shows the properties section on the admin side
     Route::get('/viewProperties', [PropertyController::class, 'manage'])->name('viewProperties');
