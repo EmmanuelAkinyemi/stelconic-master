@@ -55,9 +55,9 @@
                                 </li>
                                 <li class=""><a href="properties"><span>Property</span></a>
                                 </li>
-                                <li class="current"><a href="blogs"><span>Blog</span></a>
+                                <li class=""><a href="blogs"><span>Blog</span></a>
                                 </li>
-                                <li><a href="contact"><span>Contact</span></a></li>
+                                <li class="current"><a href="contact"><span>Contact</span></a></li>
                             </ul>
                         </div>
                     </nav>
@@ -139,7 +139,7 @@
                     <div class="inner-box">
                         <div class="icon-box"><i class="icon-32"></i></div>
                         <h4>Email Address</h4>
-                        <p><a href="mailto:info@example.com">info@example.com</a><br /><a href="mailto:info@example.com">info@example.com</a></p>
+                        <p><a href="mailto:infostelconic@gmail.com">infostelconic@gmail.com</a><br /><a href="mailto:infostelconic@gmail.com">stelconic2007@yahoo.com</a></p>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,10 @@
                     <div class="inner-box">
                         <div class="icon-box"><i class="icon-33"></i></div>
                         <h4>Phone Number</h4>
-                        <p><a href="tel:+23055873407">+2(305) 587-3407</a><br /><a href="tel:+23055873408">+2(305) 587-3408</a></p>
+                        <p>
+                            <a href="tel:+2348127623718">+2(348) 127-623-718</a><br />
+                            <a href="tel:+2348184007752">+2(348) 184-007-752</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -157,7 +160,7 @@
                     <div class="inner-box">
                         <div class="icon-box"><i class="icon-34"></i></div>
                         <h4>Office Address</h4>
-                        <p>214 West Arnold St. New York, <br />NY 10002</p>
+                        <p> Flat 2 Block D Millenium Plaza, <br />Awka Anambra State</p>
                     </div>
                 </div>
             </div>
@@ -170,7 +173,7 @@
 <!-- contact-section -->
 <section style="margin-bottom:0px" class="contact-section bg-color-1">
     <div class="auto-container">
-        <div class="row align-items-center clearfix ">
+        <div class="row align-items-center justify-content-center clearfix ">
             <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                 <div class="content-box">
                     <div class="sec-title">
@@ -178,10 +181,11 @@
                         <h2>Contact Us</h2>
                     </div>
                     <div class="form-inner">
-                        <form method="post" action="http://azim.commonsupport.com/Realshed/sendemail.php" id="contact-form">
+                        <form method="post" action="{{ url('contact_mail') }}" id="contact-form">
+                            @csrf
                             <div class="row clearfix">
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                    <input type="text" name="username" placeholder="Your Name" required="">
+                                    <input type="text" name="fullname" placeholder="Your Name" required="">
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                     <input type="email" name="email" placeholder="Email address" required="">
@@ -196,27 +200,10 @@
                                     <textarea name="message" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                                    <button class="theme-btn btn-one" type="submit" name="submit-form">Send Message</button>
+                                    <button class="theme-btn btn-one" type="submit">Send Message</button>
                                 </div>
                             </div>
                         </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 map-column">
-                <div class="google-map-area">
-                    <div
-                        class="google-map"
-                        id="contact-google-map"
-                        data-map-lat="40.712776"
-                        data-map-lng="-74.005974"
-                        data-icon-path="{{ asset('web/images/icons/map-marker.png') }}"
-                        data-map-title="Brooklyn, New York, United Kingdom"
-                        data-map-zoom="12"
-                        data-markers='{
-                            "marker-1": [40.712776, -74.005974, "<h4>Branch Office</h4><p>77/99 New York</p>","{{ asset('web/images/icons/map-marker.png') }}"]
-                        }'>
-
                     </div>
                 </div>
             </div>

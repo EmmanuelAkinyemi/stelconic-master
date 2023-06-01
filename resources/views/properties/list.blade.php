@@ -8,28 +8,29 @@
             <div class="top-inner clearfix">
                 <div class="left-column pull-left">
                     <ul class="info clearfix">
-                        <li><i class="far fa-map-marker-alt"></i>Flat , Block D,Millenium Plaza Enugu-Onitsha Express way, Awka, Anambra State</li>
+                        <li><i class="far fa-map-marker-alt"></i>Flat , Block D,Millenium Plaza Enugu-Onitsha Express way,
+                            Awka, Anambra State</li>
                         <li><i class="far fa-phone"></i><a href="+2348184007752">+234 818-4007-752</a></li>
                     </ul>
                 </div>
                 <div class="right-column pull-right">
-                     @auth
-                     <div class="menu-right-content">
-                        <span class="text-lowercase mx-3">
-                            <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
-                        </span>
-                        </li>
-                        {{-- <form action="{{ route('logout') }}" method="POST">
+                    @auth
+                        <div class="menu-right-content">
+                            <span class="text-lowercase mx-3">
+                                <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
+                            </span>
+                            </li>
+                            {{-- <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <div class="sign-box">
                                 <button class="btn rounded-pill btn-warning" type="submit"><i class="fas fa-arrow-right text-light"></i></button>
                             </div>
                         </form> --}}
-                    </div>
+                        </div>
                     @else
-                    <div class="sign-box">
-                        <a href="signin"><i class="fas fa-user"></i>Sign In</a>
-                    </div>
+                        <div class="sign-box">
+                            <a href="signin"><i class="fas fa-user"></i>Sign In</a>
+                        </div>
                     @endauth
                 </div>
             </div>
@@ -144,7 +145,7 @@
                     <div class="property-content-side">
                         <div class="item-shorting clearfix">
                             <div class="left-column pull-left">
-                                <h5>Search Reasults: <span>Showing 1-5 of 20 Properties</span></h5>
+                                <h5>Here is a list of available properties</h5>
                             </div>
                             <div class="right-column pull-right clearfix">
                                 <div class="short-menu clearfix">
@@ -162,18 +163,18 @@
                                             <div class="inner-box">
                                                 <div class="image-box">
                                                     <figure class="image">
-                                                        <img
-                                                            style="height:350px; width:100%"
+                                                        <img style="height:350px; width:100%"
                                                             src="{{ $property->images ? asset('storage/' . $property->images) : asset('images/no-image.jpeg') }}"
-                                                            alt="{{ $property->title }}"
-                                                        />
+                                                            alt="{{ $property->title }}" />
                                                     </figure>
                                                     <div class="batch"><i class="icon-11"></i></div>
                                                     <span class="category">{{ $property->category }}</span>
                                                 </div>
                                                 <div class="lower-content">
                                                     <div class="title-text">
-                                                        <h4 class="text-capitalize"><a href="/properties/{{ $property->id }}">{{ $property->title }}</a></h4>
+                                                        <h4 class="text-capitalize"><a
+                                                                href="/properties/{{ $property->id }}">{{ $property->title }}</a>
+                                                        </h4>
                                                     </div>
                                                     <div class="price-box clearfix">
                                                         <div class="price-info pull-left">
@@ -182,19 +183,17 @@
                                                         </div>
                                                     </div>
                                                     <p
-                                                        style="width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;"
-                                                        >
+                                                        style="width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
                                                         {{ $property->description }}
                                                     </p>
                                                     <div class="other-info-box clearfix">
                                                         <div class="btn-box pull-left">
-                                                            <a 
-                                                                href="/properties/{{ $property->id}}"
+                                                            <a href="/properties/{{ $property->id }}"
                                                                 class="theme-btn btn-two">See Details
                                                             </a>
                                                         </div>
                                                         <ul class="other-option pull-right clearfix">
-                                                            <li><span><i class="icon-12"></i></span>
+                                                            <li><span class="text-capitalize text-warning">{{ $property->location }}</span>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -203,15 +202,9 @@
                                         </div>
                                     @endforeach
                                 </div>
-
-                            </div>
-                            <div class="pagination-wrapper">
-                                <ul class="pagination clearfix">
-                                    <li><a href="property-list.html" class="current">1</a></li>
-                                    <li><a href="property-list.html">2</a></li>
-                                    <li><a href="property-list.html">3</a></li>
-                                    <li><a href="property-list.html"><i class="fas fa-angle-right"></i></a></li>
-                                </ul>
+                                {{-- <div>
+                                    {{ $properties->links() }}
+                                </div> --}}
                             </div>
                         @else
                             <p style="text-align:center">The property page is currrently empty</p>

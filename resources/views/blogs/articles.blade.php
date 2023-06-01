@@ -7,10 +7,7 @@
         <div class="auto-container">
             <div class="content-box clearfix">
                 <h1>Blog</h1>
-                <ul class="bread-crumb clearfix">
-                    <li><a href="/">Home</a></li>
-                    <li>Blog</li>
-                </ul>
+                <p class="text-light lead"> stay up to date with our seasoned articles on properties</p>
             </div>
         </div>
     </section>

@@ -17,7 +17,7 @@
 	<meta name="format-detection" content="telephone=no">
     <title>Stelconic - Unlock real estate potential with Stelconic</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset("admin/images/favicon.png") }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset("images/logo/logo_admin.png") }}">
     <link href="{{ asset("admin/vendor/jqvmap/css/jqvmap.min.css") }}" rel="stylesheet">
 	<!-- Vectormap -->
     <link href="{{ asset("admin/vendor/jqvmap/css/jqvmap.min.css") }}" rel="stylesheet">
@@ -128,7 +128,6 @@
                                 <ul aria-expanded="false">
 									<li><a href="viewProperties">Porperties</a></li>
 									<li><a href="viewArticles">Articles</a></li>
-									<li><a href="vewUsers">Users</a></li>
                                 </ul>
                             </li>
                         </ul>

@@ -39,12 +39,7 @@
                                 <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
                             </span>
                             </li>
-                            {{-- <form action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <div class="sign-box">
-                                    <button class="btn rounded-pill btn-warning" type="submit"><i class="fas fa-arrow-right text-light"></i></button>
-                                </div>
-                            </form> --}}
+
                         </div>
                     @else
                         <div class="menu-right-content clearfix">
@@ -91,7 +86,7 @@
                 <div class="image-layer" style="background-image:url({{ asset('web/images/banner/banner-3.jpg') }})"></div>
                 <div class="auto-container">
                     <div class="content-box">
-                        <h2>Dive into the world of real estate with us </h2>
+                        <h2>Dive into the world of real estate</h2>
                         <p>We offer you great offer on commision and percentage.</p>
                     </div>
                 </div>
@@ -101,7 +96,7 @@
                 <div class="auto-container">
                     <div class="content-box">
                         <h2>Houses with aesthetic design </h2>
-                        <p>Amet consectetur adipisicing elit sed do eiusmod.</p>
+                        <p>We are into ultra modern design models.</p>
                     </div>
                 </div>
             </div>
@@ -113,52 +108,22 @@
     <!-- search-field-section -->
     <section class="search-field-section">
         <div class="auto-container">
-            <div class="row justify-content-center">
+            <div class="">
                 <div class="inner-container">
                     <div class="search-field">
                         <div class="inner-box">
                             <div class="top-search">
-                                <form action="http://azim.commonsupport.com/Realshed/index.html" method="post"
+                                <form action="/properties" method="get"
                                     class="search-form">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-4 col-md-12 col-sm-12 column">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10 col-md-12 col-sm-12 column">
                                             <div class="form-group">
                                                 <label>Search Property</label>
                                                 <div class="field-input">
                                                     <i class="fas fa-search"></i>
-                                                    <input type="search" name="search-field"
+                                                    <input type="search" name="search"
                                                         placeholder="Search by Property, Location or Landmark..."
                                                         required="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                            <div class="form-group">
-                                                <label>Location</label>
-                                                <div class="select-box">
-                                                    <i class="far fa-compass"></i>
-                                                    <select class="wide">
-                                                        <option data-display="Input location">Input
-                                                            location</option>
-                                                        <option value="1">New York</option>
-                                                        <option value="2">California</option>
-                                                        <option value="3">London</option>
-                                                        <option value="4">Maxico</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12 column">
-                                            <div class="form-group">
-                                                <label>Property Type</label>
-                                                <div class="select-box">
-                                                    <select class="wide">
-                                                        <option data-display="All Type">All Type</option>
-                                                        <option value="1">Laxury</option>
-                                                        <option value="2">Classic</option>
-                                                        <option value="3">Modern</option>
-                                                        <option value="4">New</option>
-                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -181,11 +146,11 @@
         <div class="auto-container">
             <div class="upper-box clearfix">
                 <div class="sec-title">
-                    <h5>What we do we offer?</h5>
+                    <h5>What we do?</h5>
                     <h2>Our Services</h2>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="theme-btn btn-one">All Categories</a>
+                    <span class="theme-btn btn-one">Stelconic</span>
                 </div>
             </div>
             <div class="lower-box">
@@ -194,8 +159,8 @@
                         <div class="chooseus-block-one">
                             <div class="inner-box">
                                 <div class="icon-box"><i class="icon-19"></i></div>
-                                <h4>Excellent Reputation</h4>
-                                <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
+                                <h4>Property Development</h4>
+                                <p></p>
                             </div>
                         </div>
                     </div>

@@ -13,4 +13,9 @@ class HomeController extends Controller
         $blogs = Blog::all()->sortByDesc("created_at");
         return view('index', compact('properties'), compact('blogs'));
     }
+
+    public function contact()
+    {
+        return view('contact');
+    }
 }
