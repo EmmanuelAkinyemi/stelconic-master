@@ -117,6 +117,9 @@
                     <div class="othre-text">
                         <p>Don't have an account? <a href="register">Sign up</a></p>
                     </div>
+                    <div class="othre-text">
+                        <p>Forgot Password? <a href="reset-password">click here</a></p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -122,12 +122,13 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-app"></i>
-							<span class="nav-text">Apps</span>
+							<span class="nav-text">Widget</span>
 						</a>
                         <ul aria-expanded="false">
                                 <ul aria-expanded="false">
 									<li><a href="viewProperties">Porperties</a></li>
 									<li><a href="viewArticles">Articles</a></li>
+									<li><a href="team">Team</a></li>
                                 </ul>
                             </li>
                         </ul>

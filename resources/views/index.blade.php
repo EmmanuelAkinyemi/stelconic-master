@@ -21,9 +21,10 @@
                         <nav class="main-menu navbar-expand-md navbar-light">
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li class="current"><a href="/"><span>Home</span></a>
+                                    <li class="current"><a href="/" ><span style="color: rgb(31, 216, 31)">Home</span></a>
                                     </li>
-
+                                    <li><a href="about"><span>About</span></a>
+                                    </li>
                                     <li class=""><a href="properties"><span>Property</span></a>
                                     </li>
                                     <li class=""><a href="blogs"><span>Blog</span></a>
@@ -493,7 +494,7 @@
                                                 </div>
                                                 <div class="other-info-box clearfix">
                                                     <div class="btn-box pull-left">
-                                                        <a 
+                                                        <a
                                                             href="/blogs/{{ $blog->id }}"
                                                             class="theme-btn btn-one">
                                                             See Details
