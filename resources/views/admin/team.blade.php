@@ -11,7 +11,7 @@
     </div>
 
     <div class="row">
-        @unless ($teams == 0)
+        @unless (count($teams) == 0)
             @foreach ($teams as $teams)
                 <div class="col-xl-3 col-lg-6 col-md-4 col-sm-6">
                     <div class="card">
