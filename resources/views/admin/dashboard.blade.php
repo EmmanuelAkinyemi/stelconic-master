@@ -24,9 +24,9 @@
                                         </span>
                                         <div class="media-body text-white">
                                             <p class="mb-1">Agents</p>
-                                            <h3 class="text-white">{{ $users }}</h3>
+                                            <h3 class="text-white">0</h3>
                                             <div class="progress mb-2 bg-secondary">
-                                                <div class="progress-bar progress-animated bg-light" style="{{ $blogs }}/100 + %"></div>
+                                                <div class="progress-bar progress-animated bg-light" style="100%"></div>
                                             </div>
                                             <small>all users on desk</small>
                                         </div>
@@ -43,9 +43,9 @@
                                         </span>
                                         <div class="media-body text-white">
                                             <p class="mb-1">Properties</p>
-                                            <h3 class="text-white">{{ $properties }}</h3>
+                                            <h3 class="text-white"></h3>
                                             <div class="progress mb-2 bg-primary">
-                                                <div class="progress-bar progress-animated bg-light" style="{{ $blogs }}/100 + %"></div>
+                                                <div class="progress-bar progress-animated bg-light" style="100%"></div>
                                             </div>
                                             <small>properties you listed</small>
                                         </div>
@@ -62,9 +62,9 @@
                                         </span>
                                         <div class="media-body text-white">
                                             <p class="mb-1">Articles</p>
-                                            <h3 class="text-white">{{ $blogs }}</h3>
+                                            <h3 class="text-white">100</h3>
                                             <div class="progress mb-2 bg-primary">
-                                                <div class="progress-bar progress-animated bg-light" style="{{ $blogs }}/100 + %"></div>
+                                                <div class="progress-bar progress-animated bg-light" style="100%"></div>
                                             </div>
                                             <small>articles you wrote</small>
                                         </div>

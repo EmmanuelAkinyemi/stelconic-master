@@ -43,6 +43,7 @@ class AuthController extends Controller
 
     public function dashboard()
     {
+        
         return view('admin.dashboard');
     }
 
@@ -53,5 +54,5 @@ class AuthController extends Controller
         return redirect()->route('login');
     }
 
-    
+
 }

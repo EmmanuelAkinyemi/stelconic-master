@@ -17,13 +17,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [HomeController::class, 'index']);
 
+Route::get('/contact', [HomeController::class, 'contact']);
+
+Route::post('contact_mail', [HomeController::class, 'sendMail']);
 
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('/', [HomeController::class, 'index']);
-Route::get('/contact', [HomeController::class, 'contact']);
-Route::post('contact_mail', [HomeController::class, 'sendMail']);
+
+
+
     Route::get('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'registerUser'])->name('register');
     Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -41,7 +45,7 @@ Route::post('contact_mail', [HomeController::class, 'sendMail']);
     Route::get('/properties/{property}', [PropertyController::class, 'show'])->name('show');
 });
 
-Route::group(['middleware' => ['auth', 'verified']], function () {
+Route::group(['middleware' => ['auth']], function () {
     //shows the admin dashboard
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
     //shows the properties section on the admin side

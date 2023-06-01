@@ -18,4 +18,8 @@ class HomeController extends Controller
     {
         return view('contact');
     }
+    public function sendMail(Request $request)
+    {
+        dd(($request)->all());
+    }
 }
