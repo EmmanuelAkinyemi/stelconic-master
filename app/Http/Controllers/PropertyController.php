@@ -43,7 +43,7 @@ class PropertyController extends Controller
     {
         $formFields = $request->validate([
             'title' => 'required',
-            'price' => ['required'],
+            'price' => 'required',
             'location' => 'required',
             'category' => 'required',
             'description' => 'required'
@@ -74,7 +74,7 @@ class PropertyController extends Controller
 
         $formFields = $request->validate([
             'title' => 'required',
-            'price' => ['required'],
+            'price' => 'required',
             'location' => 'required',
             'category' => 'required',
             'status' => 'required',

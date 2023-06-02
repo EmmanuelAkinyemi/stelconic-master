@@ -18,12 +18,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// foreach(File::allFiles(_DIR_ . '/modules') as $route_file) {
+//     require $route_file->getPathname();
+// }
+
+// Route::fallback(function(){
+//     return view('404');
+// });
+
 Route::get('/', [HomeController::class, 'index']);
+
 Route::view('/about', 'about');
+
 Route::get('/contact', [HomeController::class, 'contact']);
 
 Route::post('contact_mail', [HomeController::class, 'sendMail']);
 
+//shows all the articles on the client
+Route::get('/blogs', [BlogController::class, 'list'])->name('list');
+
+//shows all the properties  on the client
+Route::get('/properties', [PropertyController::class, 'list'])->name('list');
+
+//shows and display selected article
+Route::get('/blogs/{blog}', [BlogController::class, 'show'])->name('show');
+
+//shows and display selected property on the section on the client side
+Route::get('/properties/{property}', [PropertyController::class, 'show'])->name('show');
 
 Route::group(['middleware' => 'guest'], function () {
 
@@ -36,18 +57,6 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/login', [AuthController::class, 'loginUser'])->name('login');
 
     Route::get('/reset-password', [AuthController::class, 'resetPassword'])->name('resetPassword');
-
-    //shows all the properties  on the client
-    Route::get('/properties', [PropertyController::class, 'list'])->name('list');
-
-    //shows and display selected article
-    Route::get('/blogs/{blog}', [BlogController::class, 'show'])->name('show');
-
-    //shows all the articles on the client
-    Route::get('/blogs', [BlogController::class, 'list'])->name('list');
-
-    //shows and display selected property on the section on the client side
-    Route::get('/properties/{property}', [PropertyController::class, 'show'])->name('show');
 });
 
 Route::group(['middleware' => ['auth']], function () {
@@ -56,7 +65,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     //renders the view for team members on the dashboard
     Route::get('/team', [TeamController::class, 'team'])->name('team');
+    Route::get('/create-team', [TeamController::class, 'create'])->name('create-team');
 
+    Route::post('/create-team', [TeamController::class, 'store'])->name('store');
     //shows the properties section on the admin side
     Route::get('/viewProperties', [PropertyController::class, 'manage'])->name('viewProperties');
 

@@ -7,7 +7,7 @@
             <h2 class="text-black font-w600">Team Member Control Center</h2>
             <p class="mb-0">{{ auth()->user()->name }}</p>
         </div>
-        <a href="create-property" class="btn btn-primary rounded"><i class="fas fa-plus me-0"></i></a>
+        <a href="create-team" class="btn btn-primary rounded"><i class="fas fa-plus me-0"></i></a>
     </div>
 
     <div class="row">
@@ -39,7 +39,7 @@
 
             @endforeach
             @else
-                <p>Team members are yet to be listed</p>
+                <p class="text-center display-6 fw-light">Team members are yet to be listed</p>
             @endunless
         </div>
     </div>

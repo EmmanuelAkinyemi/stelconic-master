@@ -9,11 +9,12 @@ class team extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'user_id',
         'name',
         'role',
         'image',
         'email',
         'facebook',
-        'password',
+        'twitter',
     ];
 }

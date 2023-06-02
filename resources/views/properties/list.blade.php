@@ -55,11 +55,11 @@
                                 <ul class="navigation clearfix">
                                     <li class=""><a href="/"><span>Home</span></a>
                                     </li>
-                                    <li class="current"><a href="properties"><span>Property</span></a>
+                                    <li class="current"><a href="/properties"><span>Property</span></a>
                                     </li>
-                                    <li class=""><a href="blogs"><span>Blog</span></a>
+                                    <li class=""><a href="/blogs"><span>Blog</span></a>
                                     </li>
-                                    <li><a href="contact"><span>Contact</span></a></li>
+                                    <li><a href="/contact"><span>Contact</span></a></li>
                                 </ul>
                             </div>
                         </nav>
