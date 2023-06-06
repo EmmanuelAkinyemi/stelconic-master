@@ -15,9 +15,8 @@ class AuthController extends Controller
 
     public function registerUser(Request $request) {
         $user = new User();
-        $user->name = $request->name;
+        $user->username = $request->username;
         $user->usertype = $request->usertype;
-        $user->email = $request->email;
         $user->password = Hash::make($request->password);
 
         $user->save();
@@ -31,7 +30,7 @@ class AuthController extends Controller
 
     public function loginUser(Request $request) {
         $credentials = [
-            'email' => $request->email,
+            'username' => $request->username,
             'password' => $request->password
         ];
          if (Auth::attempt($credentials)) {
@@ -41,10 +40,22 @@ class AuthController extends Controller
          return back()->with('error', 'invalid credentials');
     }
 
-    public function changePass()
-    {
-        return view('auth.changePass');
-    }
+    // public function changePass()
+    // {
+    //     return view('admin.change-password');
+    // }
+
+    // public function updatePassword(Request $request)
+    // {
+
+    //     $formsField = [
+    //         'password' => $request->password
+    //     ];
+
+    //     $request->update($formsField);
+    //     return redirect('/dashboard')->with('info', 'Password Successfully!');
+
+    // }
 
     public function dashboard()
     {

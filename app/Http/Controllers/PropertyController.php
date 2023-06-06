@@ -92,9 +92,11 @@ class PropertyController extends Controller
 
     public function destroy(Property $property)
     {
-        if ($property->user_id != auth()->id()) {
+        if ($property->user_id != auth()->id())
+        {
             abort(403, 'Unauthorized Action');
         }
+        
         $property->delete();
         return redirect('/viewProperties')->with('warning', 'Property deleted successfully!');
     }

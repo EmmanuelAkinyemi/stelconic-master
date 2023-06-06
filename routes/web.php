@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\BlogController;
@@ -32,8 +33,6 @@ Route::view('/about', 'about');
 
 Route::get('/contact', [HomeController::class, 'contact']);
 
-Route::get('/changePassword', [AuthController::class, 'changePass'])->name('changePass');
-
 Route::post('contact_mail', [HomeController::class, 'sendMail']);
 
 //shows all the articles on the client
@@ -64,6 +63,9 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => ['auth']], function () {
     //shows the admin dashboard
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+
+    Route::get('change-password', [ChangePasswordController::class, 'index']);
+    Route::post('change-password', [ChangePasswordController::class, 'store'])->name('change.password');
 
     //renders the view for team members on the dashboard
     Route::get('/team', [TeamController::class, 'team'])->name('team');

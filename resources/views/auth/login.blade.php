@@ -11,26 +11,6 @@
                     <li><i class="far fa-phone"></i><a href="+2348184007752">+234 818-4007-752</a></li>
                 </ul>
             </div>
-            <div class="right-column pull-right">
-                 @auth
-                 <div class="menu-right-content">
-                    <span class="text-lowercase mx-3">
-                        <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
-                    </span>
-                    </li>
-                    {{-- <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <div class="sign-box">
-                            <button class="btn rounded-pill btn-warning" type="submit"><i class="fas fa-arrow-right text-light"></i></button>
-                        </div>
-                    </form> --}}
-                </div>
-                @else
-                <div class="sign-box">
-                    <a href="signin"><i class="fas fa-user"></i>Sign In</a>
-                </div>
-                @endauth
-            </div>
         </div>
     </div>
     <!-- header-lower -->
@@ -38,7 +18,7 @@
         <div class="outer-box">
             <div class="main-box">
                 <div class="logo-box">
-                    <figure class="logo"><a href="/"><img src="{{ asset('web/images/logo.png') }}"
+                    <figure class="logo"><a href="/"><img src="{{ asset('images/logo/logo.png') }}"
                                 alt=""></a></figure>
                 </div>
                 <div class="menu-area clearfix">
@@ -103,8 +83,8 @@
                         @csrf
                         <input type="text" name="usertype" value="agent" hidden>
                         <div class="form-group">
-                            <label>Email address</label>
-                            <input type="email" name="email" required="">
+                            <label>Username</label>
+                            <input type="text" name="username" value="stelconic" required="">
                         </div>
                         <div class="form-group">
                             <label>Password</label>

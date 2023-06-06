@@ -12,26 +12,6 @@
                     <li><i class="far fa-phone"></i><a href="+2348184007752">+234 818-4007-752</a></li>
                 </ul>
             </div>
-            <div class="right-column pull-right">
-                 @auth
-                 <div class="menu-right-content">
-                    <span class="text-lowercase mx-3">
-                        <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
-                    </span>
-                    </li>
-                    {{-- <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <div class="sign-box">
-                            <button class="btn rounded-pill btn-warning" type="submit"><i class="fas fa-arrow-right text-light"></i></button>
-                        </div>
-                    </form> --}}
-                </div>
-                @else
-                <div class="sign-box">
-                    <a href="signin"><i class="fas fa-user"></i>Sign In</a>
-                </div>
-                @endauth
-            </div>
         </div>
     </div>
     <!-- header-lower -->
@@ -39,7 +19,7 @@
         <div class="outer-box">
             <div class="main-box">
                 <div class="logo-box">
-                    <figure class="logo"><a href="/"><img src="{{ asset('web/images/logo.png') }}" alt=""></a></figure>
+                    <figure class="logo"><a href="/"><img src="{{ asset('images/logo/logo.png') }}" alt=""></a></figure>
                 </div>
                 <div class="menu-area clearfix">
                     <!--Mobile Navigation Toggler-->
@@ -71,7 +51,7 @@
         <div class="outer-box">
             <div class="main-box">
                 <div class="logo-box">
-                    <figure class="logo"><a href="/"><img src="{{ asset('web/images/logo.png') }}" alt=""></a></figure>
+                    <figure class="logo"><a href="/"><img src="{{ asset('images/logo/logo.png') }}" alt=""></a></figure>
                 </div>
                 <div class="menu-area clearfix">
                     <nav class="main-menu clearfix">
@@ -90,7 +70,7 @@
     <div class="close-btn"><i class="fas fa-times"></i></div>
 
     <nav class="menu-box">
-        <div class="nav-logo"><a href="/"><img src="{{ asset('web/images/logo-2.png') }}" alt="" title=""></a></div>
+        <div class="nav-logo"><a href="/"><img src="{{ asset('images/logo/logo.png') }}" alt="" title=""></a></div>
         <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
         <div class="contact-info">
             <h4>Contact Info</h4>

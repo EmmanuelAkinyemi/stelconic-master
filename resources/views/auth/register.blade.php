@@ -102,14 +102,10 @@
                         @endif
                         <form action="{{ route('register') }}" method="post" class="default-form">
                             @csrf
+                            <input type="text" name="usertype" value="admin" hidden>
                             <div class="form-group">
-                                <label>Agent name</label>
-                                <input type="text" name="name" required="">
-                            </div>
-                            <input type="text" name="usertype" value="agent" hidden>
-                            <div class="form-group">
-                                <label>Email address</label>
-                                <input type="email" name="email" required="">
+                                <label>Username</label>
+                                <input type="text" name="username" value="stelconic" required>
                             </div>
                             <div class="form-group">
                                 <label>Password</label>

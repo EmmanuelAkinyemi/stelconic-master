@@ -82,10 +82,10 @@
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
 									<div class="header-info">
-										<span class="text-black text-capitalize">{{ auth()->user()->name }}</span>
+										<span class="text-black text-capitalize">{{ auth()->user()->username }}</span>
 										<p class="fs-12 mb-0">{{ auth()->user()->usertype }}</p>
 									</div>
-                                    <img src="{{ asset("admin/images/avatar.jpg") }}" width="20" alt=""/>
+                                    <img src="{{ asset("images/logo/favicon.png") }}" width="20" alt="{{ auth()->user()->username }}"/>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
                                     <form action="{{ route('logout') }}" method="POST">
@@ -136,7 +136,7 @@
 
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                         <i class="flaticon-settings"></i>
-                        <span class="nav-text">Widget</span>
+                        <span class="nav-text">Settings</span>
                     </a>
                     <ul aria-expanded="false">
                             <ul aria-expanded="false">
