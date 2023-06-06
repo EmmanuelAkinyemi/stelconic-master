@@ -68,6 +68,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/create-team', [TeamController::class, 'create'])->name('create-team');
 
     Route::post('/create-team', [TeamController::class, 'storeTeam'])->name('storeTeam');
+
+    //shows the edit form for the teams on the admin side
+    Route::get('/admin/{team}/edit-team', [TeamController::class, 'editTeam'])->name('editTeam');
+
+    //updates the property record on admin side
+    Route::put('/admin/{team}', [TeamController::class, 'updateTeam'])->name('updateTeam');
+
     //shows the properties section on the admin side
     Route::get('/viewProperties', [PropertyController::class, 'manage'])->name('viewProperties');
 
