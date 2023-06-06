@@ -21,7 +21,7 @@ class TeamController extends Controller
         return view('admin.create-team');
     }
 
-    public function store(Request $request)
+    public function storeTeam(Request $request)
   {
       $formFields = $request->validate([
           'name' => 'required',

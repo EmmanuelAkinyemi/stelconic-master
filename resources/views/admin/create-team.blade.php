@@ -18,7 +18,7 @@
                 </div>
                 <div class="card-body">
                     <div class="basic-form">
-                        <form method="POST" action="{{ route('store') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('storeTeam') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6">
@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="me-sm-2">facebok handle(optional)</label>
+                                <label class="me-sm-2">Twitter handle(optional)</label>
                                 <input type="text" name="twitter" class="form-control input-rounded" placeholder="@jdoexperia">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>

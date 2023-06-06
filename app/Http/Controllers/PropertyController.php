@@ -39,7 +39,7 @@ class PropertyController extends Controller
     }
 
     //creates the property and stores in the database
-    public function store(Request $request)
+    public function storeProperty(Request $request)
     {
         $formFields = $request->validate([
             'title' => 'required',

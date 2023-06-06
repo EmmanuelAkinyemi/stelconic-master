@@ -67,7 +67,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/team', [TeamController::class, 'team'])->name('team');
     Route::get('/create-team', [TeamController::class, 'create'])->name('create-team');
 
-    Route::post('/create-team', [TeamController::class, 'store'])->name('store');
+    Route::post('/create-team', [TeamController::class, 'storeTeam'])->name('storeTeam');
     //shows the properties section on the admin side
     Route::get('/viewProperties', [PropertyController::class, 'manage'])->name('viewProperties');
 
@@ -75,7 +75,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/create-property', [PropertyController::class, 'create'])->name('create-property');
 
     //creates the properties on the admin side
-    Route::post('/create-property', [PropertyController::class, 'store'])->name('store');
+    Route::post('/create-property', [PropertyController::class, 'storeProperty'])->name('storeProperty');
 
     //shows the edit form for the properties on the admin side
     Route::get('/admin/{property}/edit-property', [PropertyController::class, 'edit'])->name('edit-property');
