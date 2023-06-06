@@ -34,21 +34,21 @@
                             </div>
                         </nav>
                     </div>
-                    @auth
-                        <div class="menu-right-content">
-                            <span class="text-lowercase mx-3">
-                                <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
-                            </span>
-                            </li>
+                        {{-- @auth
+                            <div class="menu-right-content">
+                                <span class="text-lowercase mx-3">
+                                    <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
+                                </span>
+                                </li>
 
-                        </div>
-                    @else
-                        <div class="menu-right-content clearfix">
-                            <div class="sign-box">
-                                <a href="/login"><i class="fas fa-user"></i>Sign In</a>
                             </div>
-                        </div>
-                    @endauth
+                        @else
+                            <div class="menu-right-content clearfix">
+                                <div class="sign-box">
+                                    <a href="/login"><i class="fas fa-user"></i>Sign In</a>
+                                </div>
+                            </div>
+                        @endauth --}}
                 </div>
             </div>
         </div>
@@ -246,8 +246,14 @@
                                                 </div>
                                                 <p style="width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{ $property->description }}</p>
                                                 <div class="other-info-box clearfix">
-                                                    <div class="btn-box pull-left"><a href="property"
-                                                            class="theme-btn btn-one">See Details</a></div>
+                                                    <div class="btn-box pull-left">
+                                                        <a
+                                                            href="/properties/{{ $property->id }}"
+                                                            class="theme-btn btn-one"
+                                                            >
+                                                            See Details
+                                                        </a>
+                                                    </div>
                                                     <ul class="other-option pull-right clearfix">
                                                         <li><a href="property"><i class="icon-12"></i></a>
                                                         </li>
@@ -457,12 +463,12 @@
     </section>
     <!-- place-style-two end -->
 
-    <!-- news-section -->
+    <!-- blog-section -->
     <section class="deals-style-two sec-pad">
         <div class="auto-container">
             <div class="sec-title centred">
                 <h5>Articles</h5>
-                <p>Stay updated on land and landed property on our blog posts</p>
+                <h2>Our Top Articles</h2>
             </div>
             @unless (count($blogs) == 0)
                 <div class="deals-carousel owl-carousel owl-theme dots-style-one owl-nav-none">
@@ -480,7 +486,7 @@
                                             />
                                         </figure>
                                         <div class="batch"><i class="icon-11"></i></div>
-                                        <span class="category">{{ $blog->category }}</span>
+                                        <span class="category">{{ $blog->category_id }}</span>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
@@ -491,15 +497,16 @@
                                                     <h4 class="text-capitalize"><a href="/blogs/{{ $blog->id }}">{{ $blog->title }}</a></h4>
                                                 </div>
                                                 <p style="width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{ $blog->content }}</p>
-                                                </div>
                                                 <div class="other-info-box clearfix">
                                                     <div class="btn-box pull-left">
                                                         <a
                                                             href="/blogs/{{ $blog->id }}"
-                                                            class="theme-btn btn-one">
+                                                            class="theme-btn btn-one"
+                                                            >
                                                             See Details
                                                         </a>
-                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -510,9 +517,9 @@
                     @endforeach
                 </div>
             @else
-                <p style="text-align:center">Deals are currently offline</p>
+                <p style="text-align:center">No Articles Yet Written</p>
             @endunless
         </div>
     </section>
-    <!-- news-section end -->
+    <!-- blog-section -->
 @endsection

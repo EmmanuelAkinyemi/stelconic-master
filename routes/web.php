@@ -108,9 +108,11 @@ Route::group(['middleware' => ['auth']], function () {
     //deletes listed properties
     Route::delete('/admin/{property}', [PropertyController::class, 'destroy'])->name('destroy');
 
-    //deletes listed properties
+    //deletes listed blogs
     Route::delete('/admin/{blog}', [BlogController::class, 'destroy'])->name('destroy');
 
+    //deletes listed blogs
+    Route::delete('/admin/{team}', [TeamController::class, 'destroy'])->name('destroy');
     //this logs out the authicated user
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });

@@ -42,7 +42,7 @@ class TeamController extends Controller
 
         Team::create($formFields);
 
-        return redirect('/team')->with('message', 'Team member listed successfully!');
+        return redirect('/team')->with('message', 'Team member listed successfully !');
     }
 
     public function editTeam(Team $team)
@@ -73,6 +73,15 @@ class TeamController extends Controller
 
         $team->update($formFields);
 
-        return redirect('/team')->with('message', 'Team Member Successfully Updated');
+        return redirect('/team')->with('message', 'Team Member Successfully Updated !');
+    }
+
+    public function destroy(Team $team)
+    {
+        if ($team->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
+        $team->delete();
+        return redirect('/team')->with('message', 'Team Member Deleted Successfully !');
     }
 }

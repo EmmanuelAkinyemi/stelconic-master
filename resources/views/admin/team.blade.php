@@ -29,10 +29,16 @@
                                     <p><span class="text-small fw-light">{{ $team->role }}</span></p>
                                     <div class="row clearfix">
                                         <div class="col-6">
-                                            <li><a href="admin/{{ $team->id }}/edit-team"><i class="fa fa-pen text-success"></i></a></li>
+                                            <li><a class="btn  shadow btn-xs sharp" href="admin/{{ $team->id }}/edit-team"><i class="fa fa-pen text-success"></i></a></li>
                                         </div>
                                         <div class="col-6">
-                                            <li><a href=""><i class="fa fa-trash text-danger"></i></a></li>
+                                            <form action="/admin/{{ $team->id }}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                            <button class="btn shadow btn-xs sharp">
+                                                <i class="fas fa-trash text-danger"></i>
+                                            </button>
+                                        </form>
                                         </div>
                                     </div>
                                 </div>
