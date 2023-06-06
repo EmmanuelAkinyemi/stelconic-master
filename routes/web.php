@@ -32,6 +32,8 @@ Route::view('/about', 'about');
 
 Route::get('/contact', [HomeController::class, 'contact']);
 
+Route::get('/changePassword', [AuthController::class, 'changePass'])->name('changePass');
+
 Route::post('contact_mail', [HomeController::class, 'sendMail']);
 
 //shows all the articles on the client
@@ -73,7 +75,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/{team}/edit-team', [TeamController::class, 'editTeam'])->name('editTeam');
 
     //updates the property record on admin side
-    Route::put('/teams/{team}', [TeamController::class, 'updateTeam'])->name('updateTeam');
+    Route::put('/teams/{team}', [TeamController::class, 'update'])->name('update');
 
     //shows the properties section on the admin side
     Route::get('/viewProperties', [PropertyController::class, 'manage'])->name('viewProperties');

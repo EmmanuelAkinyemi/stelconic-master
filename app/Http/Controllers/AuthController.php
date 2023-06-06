@@ -41,9 +41,9 @@ class AuthController extends Controller
          return back()->with('error', 'invalid credentials');
     }
 
-    public function resetPassword()
+    public function changePass()
     {
-        return view('auth.forgotPass');
+        return view('auth.changePass');
     }
 
     public function dashboard()

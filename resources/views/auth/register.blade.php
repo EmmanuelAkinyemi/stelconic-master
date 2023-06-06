@@ -38,7 +38,7 @@
         <div class="outer-box">
             <div class="main-box">
                 <div class="logo-box">
-                    <figure class="logo"><a href="/"><img src="{{ asset('web/images/logo.png') }}"
+                    <figure class="logo"><a href="/"><img src="{{ asset('images/logo/logo.png') }}"
                                 alt=""></a></figure>
                 </div>
                 <div class="menu-area clearfix">

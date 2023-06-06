@@ -133,6 +133,18 @@
                             </li>
                         </ul>
                     </li>
+
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-settings"></i>
+                        <span class="nav-text">Widget</span>
+                    </a>
+                    <ul aria-expanded="false">
+                            <ul aria-expanded="false">
+                                <li><a href="change-password">Change Password</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 </ul>
 			</div>
         </div>

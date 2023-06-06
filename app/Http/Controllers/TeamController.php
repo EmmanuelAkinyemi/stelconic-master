@@ -50,7 +50,7 @@ class TeamController extends Controller
         return view('admin.edit-team', ['team' => $team]);
     }
 
-    public function updateTeam(Request $request, Team $team)
+    public function update(Request $request, Team $team)
     {
 
         if ($team->user_id != auth()->id())
@@ -61,7 +61,7 @@ class TeamController extends Controller
         $formFields = $request->validate([
             'name' => 'required',
             'role' => 'required',
-            'email' => ['required', 'email', Rule::unique('teams', 'email')],
+            'email' => ['required'],
             'facebook' => 'required',
             'twitter' => 'required',
         ]);

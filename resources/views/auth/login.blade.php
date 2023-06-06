@@ -71,7 +71,7 @@
         <div class="outer-box">
             <div class="main-box">
                 <div class="logo-box">
-                    <figure class="logo"><a href="/"><img src="{{ asset('web/images/logo.png') }}"
+                    <figure class="logo"><a href="/"><img src="{{ asset('images/logo/logo.png') }}"
                                 alt=""></a></figure>
                 </div>
                 <div class="menu-area clearfix">
@@ -118,7 +118,7 @@
                         <p>Don't have an account? <a href="register">Sign up</a></p>
                     </div>
                     <div class="othre-text">
-                        <p>Forgot Password? <a href="reset-password">click here</a></p>
+                        <p>Forgot Password? <a href="changepass">click here</a></p>
                     </div>
                 </div>
             </div>
