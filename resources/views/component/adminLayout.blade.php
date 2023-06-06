@@ -144,6 +144,7 @@
             Content body start
         ***********************************-->
         <div class="content-body">
+            @include('flash-message');
             @yield('content')
         </div>
         <!--**********************************

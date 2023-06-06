@@ -57,7 +57,7 @@ class PropertyController extends Controller
 
         Property::create($formFields);
 
-        return redirect('/viewProperties')->with('message', 'Property created successfully!');
+        return redirect('/viewProperties')->with('success', 'Property created successfully!');
     }
 
     public function edit(Property $property)
@@ -87,7 +87,7 @@ class PropertyController extends Controller
 
         $Property->update($formFields);
 
-        return redirect('/viewProperties')->with('message', 'Property updated successfully!');
+        return redirect('/viewProperties')->with('info', 'Property updated successfully!');
     }
 
     public function destroy(Property $property)
@@ -96,7 +96,7 @@ class PropertyController extends Controller
             abort(403, 'Unauthorized Action');
         }
         $property->delete();
-        return redirect('/viewProperties')->with('message', 'Property deleted successfully!');
+        return redirect('/viewProperties')->with('warning', 'Property deleted successfully!');
     }
 
     public function manage()

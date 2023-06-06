@@ -47,7 +47,7 @@ class BlogController extends Controller
 
       Blog::create($formFields);
 
-      return redirect('/viewArticles')->with('message', 'Article created successfully!');
+      return redirect('/viewArticles')->with('success', 'Article created successfully!');
   }
 
   public function edit(Blog $blog)
@@ -74,7 +74,7 @@ class BlogController extends Controller
 
       $blog->update($formFields);
 
-      return redirect('/viewArticles')->with('message', 'Article updated successfully!');
+      return redirect('/viewArticles')->with('info', 'Article updated successfully!');
   }
 
   public function destroy(Blog $blog)
@@ -83,7 +83,7 @@ class BlogController extends Controller
           abort(403, 'Unauthorized Action');
       }
       $blog->delete();
-      return redirect('/viewArticles')->with('message', 'Article deleted successfully!');
+      return redirect('/viewArticles')->with('warning', 'Article deleted successfully!');
   }
 
   public function manage()

@@ -19,7 +19,7 @@
                 </div>
                 <div class="card-body">
                     <div class="basic-form">
-                        <form method="POST" action="/admin/{{ $team->id }}" enctype="multipart/form-data">
+                        <form method="POST" action="/teams/{{ $team->id }}" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 

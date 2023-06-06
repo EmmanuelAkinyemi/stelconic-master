@@ -105,6 +105,7 @@
             </nav>
         </div><!-- End Mobile Menu -->
         {{-- view output --}}
+        @include('flash-message');
         @yield('content');
         <!-- subscribe-section -->
         <section class="subscribe-section bg-color-3">

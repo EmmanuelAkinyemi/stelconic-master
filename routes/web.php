@@ -73,7 +73,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/{team}/edit-team', [TeamController::class, 'editTeam'])->name('editTeam');
 
     //updates the property record on admin side
-    Route::put('/admin/{team}', [TeamController::class, 'updateTeam'])->name('updateTeam');
+    Route::put('/teams/{team}', [TeamController::class, 'updateTeam'])->name('updateTeam');
 
     //shows the properties section on the admin side
     Route::get('/viewProperties', [PropertyController::class, 'manage'])->name('viewProperties');
@@ -109,10 +109,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::delete('/admin/{property}', [PropertyController::class, 'destroy'])->name('destroy');
 
     //deletes listed blogs
-    Route::delete('/admin/{blog}', [BlogController::class, 'destroy'])->name('destroy');
+    Route::delete('/articles/{blog}', [BlogController::class, 'destroy'])->name('destroy');
 
-    //deletes listed blogs
-    Route::delete('/admin/{team}', [TeamController::class, 'destroy'])->name('destroy');
+    //deletes listed team members
+    Route::delete('/teams/{team}', [TeamController::class, 'destroyTeam'])->name('destroyTeam');
     //this logs out the authicated user
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });

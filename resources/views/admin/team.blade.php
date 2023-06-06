@@ -32,7 +32,7 @@
                                             <li><a class="btn  shadow btn-xs sharp" href="admin/{{ $team->id }}/edit-team"><i class="fa fa-pen text-success"></i></a></li>
                                         </div>
                                         <div class="col-6">
-                                            <form action="/admin/{{ $team->id }}" method="post">
+                                            <form action="/teams/{{ $team->id }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
                                             <button class="btn shadow btn-xs sharp">

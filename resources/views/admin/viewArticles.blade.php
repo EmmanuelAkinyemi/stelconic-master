@@ -37,7 +37,7 @@
                                         <tr>
                                             <td>{{ $blog->id }}</td>
                                             <td>
-                                                <img 
+                                                <img
                                                     style="width:100px; height: 100px"
                                                     class="img-fluid img-thumbnail rounded"
                                                     src="{{ $blog->image ? asset('storage/' . $blog->image) : asset('images/no-image.jpeg') }}" alt=""
@@ -50,7 +50,7 @@
                                                     <a href="admin/{{ $blog->id }}/edit-article" class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                             class="fas fa-pencil-alt"></i></a>
 
-                                                    <form action="/admin/{{ $blog->id }}" method="post">
+                                                    <form action="/articles/{{ $blog->id }}" method="post">
                                                             @csrf
                                                             @method('DELETE')
                                                         <button class="btn btn-danger shadow btn-xs sharp"><i
