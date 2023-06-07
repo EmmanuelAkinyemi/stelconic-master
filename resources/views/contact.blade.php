@@ -33,6 +33,8 @@
                             <ul class="navigation clearfix">
                                 <li class=""><a href="/"><span>Home</span></a>
                                 </li>
+                                <li class=""><a href="about"><span>About</span></a>
+                                </li>
                                 <li class=""><a href="properties"><span>Property</span></a>
                                 </li>
                                 <li class=""><a href="blogs"><span>Blog</span></a>

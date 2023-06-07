@@ -12,26 +12,6 @@
                     <li><i class="far fa-phone"></i><a href="+2348184007752">+234 818-4007-752</a></li>
                 </ul>
             </div>
-            <div class="right-column pull-right">
-                 @auth
-                 <div class="menu-right-content">
-                    <span class="text-lowercase mx-3">
-                        <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
-                    </span>
-                    </li>
-                    {{-- <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <div class="sign-box">
-                            <button class="btn rounded-pill btn-warning" type="submit"><i class="fas fa-arrow-right text-light"></i></button>
-                        </div>
-                    </form> --}}
-                </div>
-                @else
-                <div class="sign-box">
-                    <a href="signin"><i class="fas fa-user"></i>Sign In</a>
-                </div>
-                @endauth
-            </div>
         </div>
     </div>
     <!-- header-lower -->
@@ -123,21 +103,18 @@
                         <div class="content-box">
                             <div class="sec-title">
                                 <h5>About</h5>
-                                <h2>Hi, I’m Jessica Blake</h2>
+                                <h2>Stelconic Properties Limited</h2>
                             </div>
                             <div class="text">
-                                <p>Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et
-                                    dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco
-                                    laboris aliquip ex ea commodo consequat duis aute irure.</p>
-                                <p>dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur excepteur sint occaecat.</p>
+                                <p>Stelconic Properties Limited is a wholly indiginous and dynamic company directed by a team of experienced experts and creative minds. It is duly incorporated with Cooperate Affairs Commission (CAC) of the Federal Republic of Nigeria under the companies and allied matters with our head office.</p>
+                                <p>(@flat2,Block D) Millenium Plaza, Enugu-Onitsha Expressway, behind UBA and Total Fuel Station Awka, Anambra State</p>
                             </div>
                             <ul class="list clearfix">
-                                <li>consectetur elit sed do eius</li>
-                                <li>consectetur elit sed</li>
+                                <li>Profitability</li>
+                                <li>Good Initiatives</li>
                             </ul>
                             <div class="btn-box">
-                                <a href="contact.html" class="theme-btn btn-one">Contact With Me</a>
+                                <a href="/contact" class="theme-btn btn-one">Contact Us</a>
                             </div>
                         </div>
                     </div>

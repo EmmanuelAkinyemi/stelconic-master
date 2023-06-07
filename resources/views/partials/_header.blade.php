@@ -9,26 +9,6 @@
                     <li><i class="far fa-phone"></i><a href="+2348184007752">+234 818-4007-752</a></li>
                 </ul>
             </div>
-            <div class="right-column pull-right">
-                 @auth
-                 <div class="menu-right-content">
-                    <span class="text-lowercase mx-3">
-                        <a href="/dashboard" class="text-light">{{ auth()->user()->email }}</a>
-                    </span>
-                    </li>
-                    {{-- <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <div class="sign-box">
-                            <button class="btn rounded-pill btn-warning" type="submit"><i class="fas fa-arrow-right text-light"></i></button>
-                        </div>
-                    </form> --}}
-                </div>
-                @else
-                <div class="sign-box">
-                    <a href="signin"><i class="fas fa-user"></i>Sign In</a>
-                </div>
-                @endauth
-            </div>
         </div>
     </div>
     <!-- header-lower -->
@@ -50,6 +30,8 @@
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
                                 <li class=""><a href="/"><span>Home</span></a>
+                                </li>
+                                <li class=""><a href="about"><span>About</span></a>
                                 </li>
                                 <li class=""><a href="properties"><span>Property</span></a>
                                 </li>
