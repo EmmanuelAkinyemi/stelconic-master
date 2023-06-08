@@ -42,7 +42,8 @@ class ChangePasswordController extends Controller
         ]);
 
         User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
+        return redirect('/dashboard')->with('info', 'Admin Password Successfully Changed!');
 
-        dd('Password change successfully.');
+        // dd('Password change successfully.');
     }
 }

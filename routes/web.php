@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactUsFormController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TeamController;
@@ -31,9 +32,8 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::view('/about', 'about');
 
-Route::get('/contact', [HomeController::class, 'contact']);
-
-Route::post('contact_mail', [HomeController::class, 'sendMail']);
+Route::get('/contact', [ContactUsFormController::class, 'createForm']);
+Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
 
 //shows all the articles on the client
 Route::get('/blogs', [BlogController::class, 'list'])->name('list');

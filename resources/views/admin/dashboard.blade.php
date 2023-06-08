@@ -23,12 +23,13 @@
                                             <i class="la la-users"></i>
                                         </span>
                                         <div class="media-body text-white">
-                                            <p class="mb-1">Agents</p>
-                                            <h3 class="text-white">0</h3>
+                                            <p class="mb-1">Team</p>
+                                            <h3 class="text-white">{{ $teams->count() }}
+                                            </h3>
                                             <div class="progress mb-2 bg-secondary">
                                                 <div class="progress-bar progress-animated bg-light" style="100%"></div>
                                             </div>
-                                            <small>all users on desk</small>
+                                            <small>available team members</small>
                                         </div>
                                     </div>
                                 </div>
@@ -43,7 +44,8 @@
                                         </span>
                                         <div class="media-body text-white">
                                             <p class="mb-1">Properties</p>
-                                            <h3 class="text-white"></h3>
+                                            <h3 class="text-white">{{ $properties->count() }}
+                                            </h3>
                                             <div class="progress mb-2 bg-primary">
                                                 <div class="progress-bar progress-animated bg-light" style="100%"></div>
                                             </div>
@@ -62,7 +64,8 @@
                                         </span>
                                         <div class="media-body text-white">
                                             <p class="mb-1">Articles</p>
-                                            <h3 class="text-white">100</h3>
+                                            <h3 class="text-white">{{ $blogs->count() }}
+                                            </h3>
                                             <div class="progress mb-2 bg-primary">
                                                 <div class="progress-bar progress-animated bg-light" style="100%"></div>
                                             </div>

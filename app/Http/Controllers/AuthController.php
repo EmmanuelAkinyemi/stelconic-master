@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Team;
+use App\Models\Blog;
+use App\Models\Property;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -40,27 +43,13 @@ class AuthController extends Controller
          return back()->with('error', 'invalid credentials');
     }
 
-    // public function changePass()
-    // {
-    //     return view('admin.change-password');
-    // }
-
-    // public function updatePassword(Request $request)
-    // {
-
-    //     $formsField = [
-    //         'password' => $request->password
-    //     ];
-
-    //     $request->update($formsField);
-    //     return redirect('/dashboard')->with('info', 'Password Successfully!');
-
-    // }
-
     public function dashboard()
     {
 
-        return view('admin.dashboard');
+        $blogs = Blog::all();
+        $properties = Property::all();
+        $teams = Team::all();
+        return view('admin.dashboard', compact('blogs','properties', 'teams'));
     }
 
     public function logout()
