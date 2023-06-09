@@ -28,10 +28,10 @@
                                     <div class="inner-box">
                                         <div class="image-box">
                                             <figure class="image">
-                                                <a href="blog-details.html">
+                                                <a href="/blogs/{{ $blog->id }}">
                                                     <img
                                                         style="height:300px; width:100%; position:relative"
-                                                        src="{{ $blog->image ? asset('storage/' . $blog->image) : asset('images/no-image.jpeg') }}" 
+                                                        src="{{ $blog->image ? asset('storage/' . $blog->image) : asset('images/no-image.jpeg') }}"
                                                         alt="{{ $blog->title }}"
                                                     />
                                                 </a>
