@@ -132,68 +132,80 @@
             <h5>Our Services</h5>
             <h2>Property Services</h2>
         </div>
-        <div class="three-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-1"></i></div>
-                    <h4>Excellent Reputation</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
+        <div class="row clearfix">
+            <div class="col-lg-4 col-md-6 col-sm-12 info-block my-3">
+                <div class="info-block-one">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="icon-32"></i></div>
+                        <h5 class="text-capitalize">Sources Of Landed Property</h5>
+                        <p>
+                            We help our client to source and secure lands or buildings in case they want to buy empty and genuine land or building in any part of the state of country
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-26"></i></div>
-                    <h4>Best Local Agents</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
+            <div class="col-lg-4 col-md-6 col-sm-12 info-block my-3">
+                <div class="info-block-one">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="icon-33"></i></div>
+                        <h5>Consultancy Services</h5>
+                        <p>
+                            We help land owner seek for compensation from government. We also give advice on investment,negotiation, legal implication of property
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-21"></i></div>
-                    <h4>Personalized Service</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
+            <div class="col-lg-4 col-md-6 col-sm-12 info-block my-3">
+                <div class="info-block-one">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="icon-34"></i></div>
+                        <h5>Architectural Design</h5>
+                        <p>
+                            We design, redesign building/structures to the taste and modernity of our client at a particular point in time, ranging from plan to modelling.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-1"></i></div>
-                    <h4>Excellent Reputation</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
+            <div class="col-lg-4 col-md-6 col-sm-12 info-block my-3">
+                <div class="info-block-one">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="icon-32"></i></div>
+                        <h5 class="text-capitalize">Sales and Purchase of Landed Properties</h5>
+                        <p>We helpour clients to sell their landed properties such as: Empty land, uncompleted or completed structure. we also buy land or building from those that want to sell and sell to those willing to buy</p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-26"></i></div>
-                    <h4>Best Local Agents</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
+            <div class="col-lg-4 col-md-6 col-sm-12 info-block my-3">
+                <div class="info-block-one">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="icon-33"></i></div>
+                        <h5>Estate Agency and Property Management</h5>
+                        <p>
+                            We act as agents or auctioneers in a purchaseand also help safeguarging the interest of the owner as well as selection of profitable tenants and maintenance of contractual relatonship
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-21"></i></div>
-                    <h4>Personalized Service</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
+            <div class="col-lg-4 col-md-6 col-sm-12 info-block my-3">
+                <div class="info-block-one">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="icon-34"></i></div>
+                        <h5>Property Development</h5>
+                        <p>
+                            At stelconic we undertake comtract of building houses, drainages and other civil works for our client as suggested by the clients request.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-1"></i></div>
-                    <h4>Excellent Reputation</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
-                </div>
-            </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-26"></i></div>
-                    <h4>Best Local Agents</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
-                </div>
-            </div>
-            <div class="feature-block-two">
-                <div class="inner-box">
-                    <div class="icon-box"><i class="icon-21"></i></div>
-                    <h4>Personalized Service</h4>
-                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor incididunt dolore magna.</p>
+            <div class="col-lg-4 col-md-6 col-sm-12 info-block my-3">
+                <div class="info-block-one">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="icon-30"></i></div>
+                        <h5>Furnishing</h5>
+                        <p>
+                            We undertake contracts of interior and exterior design such as House painting, Marble effects, Wallpapper, Stucco, Tiling, POP, Decoration.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -209,8 +221,7 @@ style="background-image: url({{ asset("web/images/background/cta-1.jpg") }});">
             <h2>Looking to Buy a New Property or <br />Sell an Existing One?</h2>
         </div>
         <div class="btn-box">
-            <a href="property-details.html" class="theme-btn btn-three">Rent Properties</a>
-            <a href="index.html" class="theme-btn btn-one">Buy Properties</a>
+            <a href="contact" class="theme-btn btn-three">Contact Us</a>
         </div>
     </div>
 </div>
@@ -221,68 +232,41 @@ style="background-image: url({{ asset("web/images/background/cta-1.jpg") }});">
 <section class="team-section sec-pad centred">
     <div class="auto-container">
         <div class="sec-title">
-            <h5>Our Agents</h5>
-            <h2>Meet Our Excellent Agents</h2>
+            <h5>Our Team</h5>
+            <h2>Meet Our Amazing Team</h2>
         </div>
+        @unless (count($teams) == 0)
         <div class="row clearfix">
+            @foreach ($teams as $team)
             <div class="col-lg-4 col-md-6 col-sm-12 team-block">
-                <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms"
-                    data-wow-duration="1500ms">
+                <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                     <div class="inner-box">
-                        <figure class="image-box"><img src="{{ asset("web/images/team/team-6.jpg") }}" alt=""></figure>
+                        <figure class="image-box">
+                            <img
+                                style="height: 350px; position:relative"
+                                src="{{ $team->image ? asset('storage/' . $team->image) : asset('images/no-image.jpeg') }}"
+                                alt="{{ $team->name }}"
+                            />
+                        </figure>
                         <div class="lower-content">
                             <div class="inner">
-                                <h4><a href="agents-details.html">Jennifer Lawrence</a></h4>
-                                <span class="designation">Senior Agent</span>
+                                <h4><a>{{ $team->name }}</a></h4>
+                                <span class="designation">{{ $team->role }}</span>
                                 <ul class="social-links clearfix">
-                                    <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
+                                    <li><a target="_blank" href="{{ $team->facebook }}"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a target="_blank" href="{{ $team->twitter }}"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a target="_blank" href="{{ $team->email }}"><i class="fab fa-google-plus-g"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 team-block">
-                <div class="team-block-one wow fadeInUp animated" data-wow-delay="300ms"
-                    data-wow-duration="1500ms">
-                    <div class="inner-box">
-                        <figure class="image-box"><img src="{{ asset("web/images/team/team-7.jpg") }}" alt=""></figure>
-                        <div class="lower-content">
-                            <div class="inner">
-                                <h4><a href="agents-details.html">Benedict Cumberbatch</a></h4>
-                                <span class="designation">Senior Agent</span>
-                                <ul class="social-links clearfix">
-                                    <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 team-block">
-                <div class="team-block-one wow fadeInUp animated" data-wow-delay="600ms"
-                    data-wow-duration="1500ms">
-                    <div class="inner-box">
-                        <figure class="image-box"><img src="{{ asset("web/images/team/team-8.jpg") }}" alt=""></figure>
-                        <div class="lower-content">
-                            <div class="inner">
-                                <h4><a href="agents-details.html">Elizabeth Winstead</a></h4>
-                                <span class="designation">Senior Agent</span>
-                                <ul class="social-links clearfix">
-                                    <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
+        @else
+        <p>Team Members are currently Offline</p>
+        @endunless
     </div>
 </section>
 <!-- team-section end -->

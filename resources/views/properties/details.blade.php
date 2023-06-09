@@ -92,26 +92,17 @@
         <div class="close-btn"><i class="fas fa-times"></i></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="/"><img src="{{ asset('web/images/logo-2.png') }}" alt=""
+            <div class="nav-logo"><a href="/"><img src="{{ asset('images/logo/logo.png') }}" alt=""
                         title=""></a></div>
             <div class="menu-outer">
                 <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
             </div>
             <div class="contact-info">
                 <h4>Contact Info</h4>
-                <ul>
-                    <li>Zions plaze, Awka</li>
-                    <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-                    <li><a href="mailto:info@example.com">info@example.com</a></li>
-                </ul>
-            </div>
-            <div class="social-links">
-                <ul class="clearfix">
-                    <li><a href="index.html"><span class="fab fa-twitter"></span></a></li>
-                    <li><a href="index.html"><span class="fab fa-facebook-square"></span></a></li>
-                    <li><a href="index.html"><span class="fab fa-pinterest-p"></span></a></li>
-                    <li><a href="index.html"><span class="fab fa-instagram"></span></a></li>
-                    <li><a href="index.html"><span class="fab fa-youtube"></span></a></li>
+                <ul class="info clearfix">
+                    <li><i class="far fa-map-marker-alt"></i>Flat , Block D,Millenium Plaza Enugu-Onitsha Express way,
+                        Awka, Anambra State</li>
+                    <li><i class="far fa-phone"></i><a href="+2348184007752">+234 818-4007-752</a></li>
                 </ul>
             </div>
         </nav>

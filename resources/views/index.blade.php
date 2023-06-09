@@ -58,7 +58,7 @@
                 <div class="outer-box">
                     <div class="main-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img src="{{ asset('images/logo/logo.png') }}"
+                            <figure class="logo"><a href="/"><img src="{{ asset('images/logo/logo.png') }}"
                                         alt=""></a></figure>
                         </div>
                         <div class="menu-area clearfix">
@@ -151,7 +151,7 @@
                         <h2>Our Services</h2>
                     </div>
                     <div class="btn-box">
-                        <span class="theme-btn btn-one">Stelconic</span>
+                        <span class="theme-btn btn-one">See More</span>
                     </div>
                 </div>
                 <div class="lower-box">
@@ -161,7 +161,7 @@
                                 <div class="inner-box">
                                     <div class="icon-box"><i class="icon-19"></i></div>
                                     <h4>Property Development</h4>
-                                    <p></p>
+                                    <p>When it comes to development of land to landed properties think stelconic</p>
                                 </div>
                             </div>
                         </div>
@@ -169,8 +169,8 @@
                             <div class="chooseus-block-one">
                                 <div class="inner-box">
                                     <div class="icon-box"><i class="icon-26"></i></div>
-                                    <h4>Best Local Agents</h4>
-                                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
+                                    <h4>Real Estate Management</h4>
+                                    <p>We assist in the monitoring and maintenace of real estate properties</p>
                                 </div>
                             </div>
                         </div>
@@ -178,8 +178,8 @@
                             <div class="chooseus-block-one">
                                 <div class="inner-box">
                                     <div class="icon-box"><i class="icon-21"></i></div>
-                                    <h4>Personalized Service</h4>
-                                    <p>Lorem ipsum dolor sit consectetur sed eiusm tempor.</p>
+                                    <h4>Furnishing</h4>
+                                    <p>We help in giving aesthetic designs to house both indoor and outdoor</p>
                                 </div>
                             </div>
                         </div>
@@ -197,7 +197,7 @@
                         <h2>Looking to Buy a New Property or <br />Sell an Existing One?</h2>
                     </div>
                     <div class="btn-box">
-                        <a href="property-details.html" class="theme-btn btn-three">Contact Us Now!</a>
+                        <a href="contact" class="theme-btn btn-three">Contact Us Now!</a>
                     </div>
                 </div>
             </div>
@@ -298,7 +298,7 @@
                                 </figure>
                                 <div class="lower-content">
                                     <div class="inner">
-                                        <h4><a href="agents-details.html">{{ $team->name }}</a></h4>
+                                        <h4><a>{{ $team->name }}</a></h4>
                                         <span class="designation">{{ $team->role }}</span>
                                         <ul class="social-links clearfix">
                                             <li><a target="_blank" href="{{ $team->facebook }}"><i class="fab fa-facebook-f"></i></a></li>
@@ -319,71 +319,6 @@
         </section>
         <!-- team-section end -->
 
-        {{-- <!-- testimonial-style-two -->
-        <section class="testimonial-style-two"
-            style="background-image: url({{ asset('web/images/background/testimonial-1.jpg') }});">
-            <div class="auto-container">
-                <div class="row clearfix">
-                    <div class="col-xl-6 col-lg-12 col-md-12 offset-xl-6 inner-column">
-                        <div class="single-item-carousel owl-carousel owl-theme dots-style-one owl-nav-none">
-                            <div class="testimonial-block-two">
-                                <div class="inner-box">
-                                    <div class="icon-box"><i class="icon-18"></i></div>
-                                    <div class="text">
-                                        <h3>“Our goal each day is to ensure that our res- idents’ needs are not only met
-                                            but exceeded To make that happen we are committed to providing an
-                                            environment.”</h3>
-                                    </div>
-                                    <div class="author-info">
-                                        <figure class="author-thumb"><img src="assets/images/resource/testimonial-1.jpg"
-                                                alt="">
-                                        </figure>
-                                        <h4>Rebeka Dawson</h4>
-                                        <span class="designation">Instructor</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-block-two">
-                                <div class="inner-box">
-                                    <div class="icon-box"><i class="icon-18"></i></div>
-                                    <div class="text">
-                                        <h3>“Our goal each day is to ensure that our res- idents’ needs are not only met
-                                            but exceeded To make that happen we are committed to providing an
-                                            environment.”</h3>
-                                    </div>
-                                    <div class="author-info">
-                                        <figure class="author-thumb"><img
-                                                src="{{ asset('web/images/resource/testimonial-2.jpg') }}" alt="">
-                                        </figure>
-                                        <h4>Marc Kenneth</h4>
-                                        <span class="designation">Founder CEO</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-block-two">
-                                <div class="inner-box">
-                                    <div class="icon-box"><i class="icon-18"></i></div>
-                                    <div class="text">
-                                        <h3>“Our goal each day is to ensure that our res- idents’ needs are not only met
-                                            but exceeded To make that happen we are committed to providing an
-                                            environment.”</h3>
-                                    </div>
-                                    <div class="author-info">
-                                        <figure class="author-thumb"><img
-                                                src="{{ asset('web/images/resource/testimonial-1.jpg') }}" alt="">
-                                        </figure>
-                                        <h4>Owen Lester</h4>
-                                        <span class="designation">Manager</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- testimonial-style-two end --> --}}
-
         <!-- place-style-two -->
         <section class="place-style-two sec-pad">
             <div class="auto-container">
@@ -392,29 +327,29 @@
                         <div class="content_block_2">
                             <div class="content-box">
                                 <div class="sec-title">
-                                    <h5>Top Places</h5>
-                                    <h2>Most Popular Places</h2>
-                                    <p>Below are list of popular places you might love to explore</p>
+                                    <h5>Our Mission</h5>
+                                    <h2>Our Pivotal Standpoint</h2>
+
                                 </div>
                                 <ul class="place-list clearfix">
-                                    <li><a href="categories.html">
-                                            <h5>Agwu-Awka</h5><span>(02)</span>
+                                    <li><a>
+                                            <h5>Valuation of landed properties</h5>
                                         </a></li>
-                                    <li><a href="categories.html">
-                                            <h5>Amenyi</h5><span>(13)</span>
+                                    <li><a>
+                                            <h5>Management of properties</h5>
                                         </a></li>
-                                    <li><a href="categories.html">
-                                            <h5>Ifite</h5><span>(05)</span>
+                                    <li><a>
+                                            <h5>Development of properties</h5>
                                         </a></li>
-                                    <li><a href="categories.html">
-                                            <h5>Amansea</h5><span>(04)</span>
+                                    <li><a>
+                                            <h5>Skilled up to date analysis</h5>
                                         </a></li>
-                                    <li><a href="categories.html">
-                                            <h5>Ngozi-ka</h5><span>(07)</span>
+                                    <li><a>
+                                            <h5>Consultancy</h5>
                                         </a></li>
                                 </ul>
                                 <div class="btn-box">
-                                    <a href="categories.html" class="theme-btn btn-one">View All Places</a>
+                                    <a href="About" class="theme-btn btn-one">About</a>
                                 </div>
                             </div>
                         </div>
