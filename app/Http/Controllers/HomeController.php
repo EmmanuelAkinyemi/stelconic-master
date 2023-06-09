@@ -32,6 +32,6 @@ class HomeController extends Controller
     {
         // dd(($request)->all());
         Mail::to('info@stelconic-properties.com')->send(new ContactMail($request));
-        return redirect('contact');
+        return redirect('contact')->with('success', 'Your Request has been received and will be reviewed shortly');
     }
 }
